@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="myList">
+        <li id="item1">Javascript</li>
+        <li>jQuery</li>
+        <li>AngularJS</li>
+        <li>NodeJS</li>
+    </ul>
+
+    <button id="first" onclick="FirstChild()">Get firstChild</button>
+    <button id="last" onclick="LastChild()">Get LastChild</button>
+    <button id="next" onclick="NextSibling()">Get Next sibling</button>
+    <button id="allChildren" onclick="GetAllChildren()">Get all children</button>
+    <button id="getParent" onclick="GetParentNode()">Get parent node</button>
+    <button id="getAtt" onclick="GetAttributes()">Get attributes</button>
+
+    <p id="demo"></p>
+    <img src="https://picsum.photos/200/300/?blur=2" alt="not renderable" id="image1">
+    <!-- <embed src="./1. Nugget 1 - Language basic.pdf" width="1200px" height="500px" /> -->
+    <!-- <iframe src="https://docs.google.com/document/d/199KRSfimzhsu8kFKTmbo-i0J96UcEW_iZ6bhyyu4MyU/" width="1200px" height="500px"></iframe> -->
+
+    <script>
+    
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function FirstChild() {
+            $("demo").innerText = $("myList").firstChild.innerText;
+            $("demo").innerText = $("myList").children[0].innerText;
+            // console.log($("myList").firstChild.innerText);
+            console.log($("myList").children);
+        }
+
+        function LastChild() {
+            $("demo").innerText = $("myList").children[ $("myList").children.length - 1 ].innerText;
+            console.log($("myList").children.length);
+        }
+
+        function NextSibling() {
+            console.log($("item1").nextSibling.nextSibling);
+            $("demo").innerText = $("item1").nextSibling.nextSibling.innerText;
+        }
+
+        function GetAllChildren() {
+            // var count = $("myList").childNodes.length;
+            var list = $("myList").childNodes;
+
+            for (let i = 1; i < list.length; i+=2) {
+                const element = list[i];
+                // $('demo').append(element.innerText);
+                $("demo").innerHTML += element.innerText + "<br/>";
+            }
+        }
+
+        function GetParentNode() {
+            $("demo").innerText = document.querySelector("li").parentNode.nodeName;
+        }
+
+        function GetAttributes() {
+            console.log($('image1').attributes);
+            console.log($("image1").getAttribute('src'));
+
+            $("image1").setAttribute("src", "https://unsplash.com/s/photos/random");
+        }
+
+        // $("first").addEventListener("click", firstChild);
+        // $("last").addEventListener("click", lastChild);
+        
+    </script>
+
+</body>
+</html>

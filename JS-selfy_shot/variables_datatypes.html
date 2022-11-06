@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var a = 100; // number;
+        var b = 12.7; // number
+        var c = "PSL";  // string
+        var d = 'persistent';  // string
+        var e = true;  // boolean
+        var f;  //undefined: variable declared and not used  (value as well as type)
+
+
+        document.write("Value of a: " + a + "<br/>");
+        document.write("Value of b: " + b + "<br/>");
+        document.write("Value of c : " + c + "<br/>");
+        document.write("Value of d : " + d + "<br/>");
+        document.write("Value of e : " + e + "<br/>");
+        document.write("Value of f : " + f + "<br/>");
+        
+        console.log(typeof(a));
+        console.log(typeof(b));
+        console.log(typeof(c));
+        console.log(typeof(d));
+        console.log(typeof(e));
+        console.log(typeof(f));
+
+        d = 1089;
+        console.log(typeof(d));
+
+        // ======== Array =========
+
+        var carsarray = ['Nano', 'Honda'];
+        carsarray.push("Audi");
+        carsarray.push("Fiat");
+
+        // pop: to remove element fom an array
+
+        for (let i = 0; i < carsarray.length; i++) {
+            const element = carsarray[i];
+            document.write(element + "<br/>");
+        }
+
+        var array1 = new Array(10, 20, 30);
+        document.write("Length of array1: " + array1.length + "<br/>");
+        document.write(array1 + '<br/>');
+
+        var array2 = new Array(10);
+        document.write("Length of array2: " + array2.length + "<br/>");
+        document.write(array2);
+
+        var x = 10 + 30 + 'abd' + 30 + 50;
+        console.log(x);
+        console.log(typeof(x));
+
+        var code = '123';
+
+        if(code === 123) {  // === checks for value and type
+        // if (code == 123) {  // == checks for value only
+            alert('If is executed');
+        } else {
+            alert('Else is executed');
+        }
+
+    </script>
+</body>
+</html>

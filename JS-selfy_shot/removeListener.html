@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: peachpuff;
+            color: maroon;
+            border: 1px solid;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <input type="button" id="mybtn" value="Remove!" />
+    </div>
+    <p id="p1"></p>
+
+    <script>
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        $("div1").addEventListener("mousemove", foo);
+
+        $("mybtn").addEventListener("click", function(evt) {
+            $("div1").removeEventListener("mousemove", foo);
+        });
+
+        function foo(evt) {
+            console.log({x: evt.x,
+                        y: evt.y});
+
+            $("p1").innerText = JSON.stringify({x: evt.x,
+                                y: evt.y}) + "\n";
+            
+            console.clear();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var counter = 0;
+
+        // Requirement: Counter should be local still it should be initialized only once.
+        // function addHits() {
+
+        //     var counter = 0;
+        //     counter++;
+        //     return counter;
+        // }
+
+        // alert(addHits());
+        // alert(addHits());
+
+        // counter = 10;
+        // alert(addHits());
+
+        /* ******************** MAGIC ********************** */
+
+        var getHits = function() {
+
+            var counter = 0; //local variable
+            var addHits = function() {    // closure/inner function
+
+                counter++;
+                return counter;
+            }
+
+            return addHits;  // returns a definition of addHits closure function
+        }();
+
+        alert(getHits);
+        alert(getHits());
+        alert(getHits());
+        alert(getHits());
+
+    </script>
+</body>
+</html>

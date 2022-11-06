@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var person1 = {
+        //     fname: "Sachin",
+        //     lname: "T"
+        // }
+        // var customer = {
+        //     fname: "Rahul",
+        //     lname: "D",
+        //     code: 1900
+        // }
+
+        // var prod = {
+        //     name: "TV",
+        //     code: 190
+        // }
+        
+        // function getFullName(address, location) {
+        //     return this.fname + " " + this.lname + " \n" + address + " " + location;
+        // }
+
+        // // person1.getFullName();
+
+        // // call getFullName() using person1
+
+        // alert(getFullName.call(person1, "Pune", "Nal stop"));  ==equiv==   person1.getFullName();
+        // alert(getFullName.apply(customer, ['Pune', 'Nal stop']));
+        // alert(getFullName.apply(prod));
+
+        function Parent(relation) {
+
+            this.relation = relation;
+
+            this.jobs = ['service', 'business'];
+            this.show = function () {
+
+                alert(this.relation);
+            }
+        }
+        Parent.prototype.protoMethod = function() {
+            alert("Parent's prototype level method is called");
+        }
+
+        // prototype chaining
+        // Child.prototype = new Parent('mother');
+
+
+        // Classical inheritance:
+        function Child(rel) {
+
+            // call parent class constructor and pass 
+            Parent.call(this, rel);
+
+        }
+
+        var child = new Child('son');
+        var child2 = new Child('daughter');
+
+        console.log(Parent.prototype);
+        console.log(Child.prototype);
+
+        console.log(child.show());
+        console.log(child2.show());
+
+        child.jobs.push("new job");
+
+        console.log(child.jobs);
+        console.log(child2.jobs);
+
+        console.log(child.protoMethod());    // error
+
+        // Drawback of classical inheritance:
+        // I can't access memebers defined at prototype level of parent.
+
+    </script>
+</body>
+</html>

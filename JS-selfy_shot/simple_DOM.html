@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">This is simple para!!</p>
+
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        console.log($('para1').childNodes);
+        console.log($("para1").children);
+        // console.log($("para1").childElementCount);
+        console.log($('para1').firstChild.nodeValue === $('para1').innerText);
+
+        console.log($("para1").nodeName, $("para1").nodeType);
+
+        // Node.ELEMENT_NODE: 1; An Element node like <p> or <div>
+        // Node.ATTRIBUTE_NODE: 2; An attribute of an element.
+        // Node.TEXT_NODE: 3; The actual text inside an element or Attr.
+    </script>
+</body>
+</html>

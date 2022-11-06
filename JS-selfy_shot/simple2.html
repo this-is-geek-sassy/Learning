@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function foo() {
+
+            var i = 1;
+            if (document.readyState == "loading") {
+                alert("foo is called!! <<loading state>>"); 
+                i = 2;
+            }
+            else if (document.readyState == "interactive") {
+                alert("foo is called!! <<interactive state>>"); 
+                i = 3;
+            }
+            else if (document.readyState == "complete") {
+                alert("foo is called!! <<complete state>>");
+                i = 4;
+            }
+            else {
+                alert("foo is called!! <<unknown state>>");
+                i = 5;
+            }
+
+            var element = document.getElementById("p1");
+            element.innerText = "Hello world from javascipt! " + i;
+        }
+
+        // foo();
+        // calling foo when document is completely on the momory
+        // document.onreadystatechange = foo;
+
+        // window: global object
+        window.onload = foo;
+        // 1. first the document gets loaded
+        // 2. then window object is loaded
+        
+
+        // ready states:
+            // uninitialized - has not started loading yet
+            // loading - is loading
+            // loaded - has loaded
+            // interactive - has loaded enough so that user can interact w/ the webpage
+            // complete - fully loaded
+    </script>
+
+</head>
+<body>
+    
+
+    <p id="p1"></p>
+
+    <script>
+        //foo();  // calling foo when document is completely on the momory
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+
+    <!-- Obtrusive event handling -->
+
+    <!-- <button id="btn1" onclick="getElementById('div1').innerText = new Date()">Date & Time</button> -->
+
+    <!-- Yet another Obtrusive event handling -->
+    <!-- <button id="btn1" onclick="setDate()">Date & Time</button> -->
+
+    <!-- Unobtrusive event handling -->
+    <button id="btn1">Date & Time</button>
+
+    <script>
+        // Problems with obtrusive event handling:
+        // 1. Maintainability: code separation is not there
+        // 2. Code reusablity is poor
+
+        // Event handler:
+        function setDate() {
+            document.getElementById('div1').innerText = new Date();
+        }
+        function test() {
+            alert("test!!");
+        }
+        // Way 1: Event handling
+        // setting the handler
+        document.getElementById('btn1').onclick = setDate;
+        document.getElementById('btn1').onclick = test;
+
+        // Way 2: Event handling
+        // document.getElementById('btn1').addEventListener("click", setDate);
+
+        /*document.getElementById('btn1').addEventListener("click", function() {
+            document.getElementById('div1').innerText = new Date();
+        });*/
+    </script>
+
+</body>
+</html>

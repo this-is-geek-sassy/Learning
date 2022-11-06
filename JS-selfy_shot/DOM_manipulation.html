@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin: 5px;
+        }
+        p {
+            font-size: x-large;
+        }
+        #opener {
+            color: green;
+        }
+        .closer {
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <p id="opener">First paragraph</p>
+    <p>Second paragraph</p>
+
+    <p class="closer">Third paragraph</p>
+    <p class="closer">Fourth paragraph</p>
+
+    <div class="closer">This is div with class closer</div>
+
+    <div>This is simple div</div>
+    <br/>
+    <span>This is outer span</span>
+    <div>
+        <span>This is inner span to div</span>
+        <br/>
+        <span>This is one more inner span to div</span>
+        <br/>
+    </div>
+
+    <button id="btnChange">Change</button>
+
+    <script>
+        document.getElementById("btnChange").onclick = function () {
+
+            // var element = document.getElementById("opener");
+            // element.style.backgroundColor = 'red';
+            // element.style.color = 'aqua';
+
+            // var elements = document.getElementsByTagName("div");
+
+            // for (const element of elements) {
+            //     element.style.background = 'yellow';
+            //     element.style.fontSize = '30px';
+            // }
+
+            // var elements = document.getElementsByClassName("closer");
+
+            // for (const element of elements) {
+            //     element.style.background = 'yellow';
+            //     element.style.fontSize = '30px';
+            // }
+
+            // var elements = document.querySelectorAll('div > span');
+            // for (const element of elements) {
+            //     element.style.background = 'yellow';
+            //     element.style.fontSize = '30px';
+            // }
+
+            // var newElement = document.createElement("div");
+            // newElement.innerText = "new div is added here";
+            // newElement.style.background = 'palegreen';
+            // newElement.style.width = '200px';
+
+            // document.body.appendChild(newElement);
+
+            var element = document.getElementById('opener');
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

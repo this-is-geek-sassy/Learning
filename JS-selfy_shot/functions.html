@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getArgs() {
+            document.write("getArgs() is called.. <br/>");
+
+            // arguments is an in build array which holds all parameters passed to given function.
+
+            for (var i in arguments) {
+
+                document.write(arguments[i]+"<br/>");
+            }
+            document.write("++++++++++  <br/>");
+        }
+
+        // every calls are valid:
+        getArgs();
+        getArgs(10, 20);
+        getArgs(123.78, "abc", 89);
+
+        var g = 10;  // global
+        function foo() {
+
+            // variable hoisting:
+                // at the beginning of function itself, all variable definitions are available
+            
+            alert("value of l " + l);
+
+            var l = 5;  // scope is local to foo
+            code = 350;  // scope is global
+
+            alert("code within function: " + code);
+        }
+
+        foo();
+        alert("value of g: " + g);
+        // alert("value of l: " + l);
+        alert("code outside function: " + code);
+
+        {
+            var c = "PSL";
+            alert("within block value of c: " + c);
+
+            let d = "psl1";
+            alert("within block value of d: " + d);
+        }
+        alert("outside block value of c: " + c);
+        alert("within block value of d: " + d);
+
+    </script>
+</body>
+</html>

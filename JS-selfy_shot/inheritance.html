@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. prototype chaining
+        // 2. classical inheritance
+        // 3. pseudoclassical inheritance := prototype + classical
+
+        function Parent(relation) {
+
+            this.relation = relation;
+
+            this.jobs = ['service', 'business'];
+            this.show = function () {
+
+                alert(this.relation);
+                return this.relation;
+            }
+        }
+
+        // prototype chaining
+        Child.prototype = new Parent('mother');
+        function Child(rel) {
+
+        }
+
+        var child = new Child('son');
+        var child2 = new Child('daughter');
+
+        console.log(Parent.prototype);
+        console.log(Child.prototype);
+
+        console.log(child.show());
+        console.log(child2.show());
+
+        child.jobs.push("new job");
+
+        console.log(child.jobs);
+        console.log(child2.jobs);
+
+        // drawback of prototype chaining:
+        // 1. Child can't pass any argument(s) to parent
+        // 2. Class/instance properties of parent are becoming prototype level members
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 'use strict'
+        function Person(fname, lname) {
+            this.firstname = fname;
+            this.lastname = lname;
+            this.species = "Human";
+            this.fullname = function () {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+        var man = new Person("Rahul", "Dravid");
+
+        Object.defineProperty(man, 'species', {
+            value: "Human being",
+            writable: false,  // modifying
+            configurable: false,  // deleting
+            enumerable: true  // for..in loop
+        });
+
+        console.log(man.fullname() + " " + man.species);
+
+        man.species = 'Fish';
+        console.log(man.fullname() + " " + man.species);
+
+        //Object.defineProperty() - method defines a 
+        // new property or modifies an existing property on an object.
+
+        for (var prop in man) {
+            document.write(man[prop] + '<br/>');
+        }
+
+
+    </script>
+</body>
+</html>

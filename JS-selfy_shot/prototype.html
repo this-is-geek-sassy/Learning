@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // whenever we dfine a member at class level, every object of that class does have seperate copy of that member
+
+        // every class has a prototype and prototype itself is an object
+        // we can define members at prototype level of class, all objects of that class will share the same copy of that member
+
+        console.log(Employee.prototype);
+
+        function Employee(r) {
+
+            this.role = r;
+
+            // this.display = function () {
+            //     alert("CTOR LEVEL: " + this.role);
+            // }
+        }
+
+        Employee.prototype.display = function () {
+                alert("CTOR LEVEL: " + this.role);
+            }
+
+        var emp1 = new Employee("Tester");
+        var emp2 = new Employee("Manager");
+        var emp3 = new Employee("Developer");
+
+        emp1.display();
+        emp2.display();
+        emp3.display();
+
+        // We can add member in the:
+        // 1. Object level
+        // 2. Class level
+        // 3. prototype level
+
+    </script>
+</body>
+</html>

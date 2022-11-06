@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 3. Create an object by using class/constructor
+        function Employee(fname, lname, city="") {
+
+            this.fname = fname;
+            this.lname = lname;
+            this.city = city;
+
+            var getFullName = function () {
+                return this.fname + " " + this.lname;
+            }
+        }
+
+        var emp1 = new Employee("Saswata", "Mishra", "Kolkata");
+        var emp2 = new Employee("Ashish", "Katale");
+        alert(JSON.stringify(emp1));
+        alert(JSON.stringify(emp2));
+
+        emp2.address = "Camp Area";
+        emp2.getFullName = function () {
+
+            return this.fname;
+        }
+        console.log(emp2.getFullName());  // object level member shadow's the class level member with sanme name
+
+
+
+    </script>
+</body>
+</html>

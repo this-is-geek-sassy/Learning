@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">This is event bubbling!</p>
+    </div>
+
+    <div id="div2">
+        <p id="p2">This is event capturing!</p>
+    </div>
+
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        // Event bubbling: Event will start traversing upwards in DOM tree
+        $('p1').addEventListener("click", function(e) {
+            alert("p1 is clicked");
+            // e.stopPropagation();    // stop propagation for parents, but allows the siblings
+            e.stopImmediatePropagation();   // stop propagation for parents as well as the siblings
+        }, false);
+
+        $('p1').addEventListener("click", function() {
+
+            let originaColor = $('p1').style.backgroundColor;
+            console.log(originaColor);
+            $('p1').style.backgroundColor = 'white';
+            //alert("p1 is clicked twice");
+        }, false);
+        
+        $('div1').addEventListener("click", function() {
+            alert("div1 is clicked");
+        }, false);
+
+        // 3rd parameter of addEventListener decides the traversing way: (false, by default)
+
+        // Differenece b/w addEventLister and onEvent (onlcick, onMouseDown)
+
+        // Event capturing: Event will start propagating from to downward direction in DOM tree
+        $('p2').addEventListener("click", function() {
+            alert("p2 is clicked");
+        }, true);
+        $('div2').addEventListener("click", function() {
+            alert("div2 is clicked");
+        }, true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var array1 = [10, 20, 30];
+
+        document.write("Type of array1: " + typeof(array1) + "<br/>");
+
+        var d1 = new Date();
+        document.write(d1 + "<br/> Type of d1: " + typeof(d1) + "<br/>");
+
+        document.write(d1.getDate() + "<br/>");
+        document.write(d1.getDay() + "<br/>");
+
+        var value = Math.pow(5,3);
+        document.write(value + "<br/>");
+
+        value = Math.random();
+        document.write(value + "<br/><br/>");
+
+        function foo() {
+
+            alert("foo is called");
+        }
+
+        var mixed_array = [3, array1, foo];
+
+        for (var i in mixed_array) {
+            document.write(mixed_array[i] + "<br/>");
+        }
+
+    </script>
+</body>
+</html>

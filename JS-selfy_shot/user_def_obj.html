@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Ways of creating user defined object:
+        // 1. Create a direct instance of Object class or use an {}
+        // 2. Object literal syntax
+        // 3. Create an object by using class/constructor
+
+        // 1. Create a direct instance of Object class or use an {}:
+        var person = new Object();
+
+        person.Fname = "Saswata";
+        person.Lname = "Mishra";
+
+        person.getData = function() {
+
+            return this.Fname + " " + this.Lname;
+        }
+
+        // alert(person.getData());
+
+        var person2 = {};  // empty object, shorthand for the prev syntax
+
+        person2.id = "x90";
+        person2.name = "Sachin";
+
+        person2.getData = function () {
+            return this.id + " " + this.name;
+        }
+
+        // alert(person2.getData());
+
+        // 2. Object literal syntax:
+
+        var product1 = {
+            id: 10,
+            name: "Rahul",
+            getData: function() {
+                return this.name;
+            }
+        }
+        product1.barcode = "1203IOPE";
+
+        var product2 = {
+            id: 15,
+            name: "Bhushan",
+            getData: function() {
+                return this.name;
+            }
+        }
+
+        var product3 = {
+            id: 20,
+            name: "Shashi",
+            getData: function() {
+                return this.name;
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>
