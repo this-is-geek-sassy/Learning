@@ -25,4 +25,21 @@ console.log(result3);
 let isValid: boolean = false;
 console.log(isValid);
 
+// array
+let emplist: string[] = ["Santosh", "saswata", "Swapna"];
+
+let deptname: Array<string> = [];  //genrerics
+
+let numbersList: Array<number>;
+
+numbersList = [1,2,3,4,5];
+
+let result4 = numbersList.filter((num) => num>2 );
+let result5 = numbersList.find ((num) => num === 2);
+
+let sum = numbersList.reduce((acc, num) => acc + num);
+
+console.log(result4);
+console.log(result5);
+
 // lname = 76;
