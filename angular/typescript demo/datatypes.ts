@@ -20,4 +20,9 @@ let dob = "25";
 let result3 = parseInt(dob);
 console.log(result3);
 
+
+// boolean
+let isValid: boolean = false;
+console.log(isValid);
+
 // lname = 76;
