@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'blog';
   number = 12;
+
+  data = 'code step by step';  // properties
+
+  getValue() {   // function
+
+    return "getting function data";
+  }
 }
