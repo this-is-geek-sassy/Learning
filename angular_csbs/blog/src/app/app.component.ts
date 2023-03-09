@@ -42,4 +42,12 @@ export class AppComponent {
     this.valueWeGot = val;
 
   }
+
+  count: number = 0;
+  counter(type: string) {
+
+    type === 'add' ? this.count++ : this.count--;
+
+    console.log(this.count);
+  }
 }
