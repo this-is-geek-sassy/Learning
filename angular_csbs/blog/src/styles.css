@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+.heading {
+    color: rgb(18, 125, 113);
+    background-color: rgba(255, 251, 0, 0.2);
+}
