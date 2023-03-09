@@ -27,7 +27,11 @@
 <br> <br>
 <textarea type="text" name="test1" #box2 placeholder="event keydown" (keydown)="getData(box2.value)">
 </textarea>
+<button type="submit" value="" id="submitBtn" (click)="getTextValue(box2.value)">submit</button>
 <p>{{box2.value}}</p>
 
 <br>
 <h1 (mouseover)="getData('my name')">Saswata Mishra</h1>
+
+<br>
+<p id="displayArea"> submition accepted: {{valueWeGot}} </p>

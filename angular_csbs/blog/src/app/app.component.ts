@@ -26,4 +26,20 @@ export class AppComponent {
     console.warn("function called!" + " " + value);
     // console.log(event.target.value);   // i don't know why it is depricated
   }
+
+  // getTextValue(val: any) {     // bekaar try, jut ignore
+  //   let valueWeGot = val;
+
+  //   console.log(valueWeGot);
+
+  //   document.getElementById("displayArea")?.innerText = valueWeGot;
+  // }
+
+  valueWeGot = '';
+
+  getTextValue(val: any) {
+
+    this.valueWeGot = val;
+
+  }
 }
