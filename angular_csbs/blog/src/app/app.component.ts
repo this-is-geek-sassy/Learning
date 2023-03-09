@@ -20,4 +20,10 @@ export class AppComponent {
 
     alert("function called " + name + " " + age);
   }
+
+  getData(value: any) {
+
+    console.warn("function called!" + " " + value);
+    // console.log(event.target.value);   // i don't know why it is depricated
+  }
 }

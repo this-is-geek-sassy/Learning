@@ -19,3 +19,15 @@
 <h2>Functions in Angular</h2>
 
 <button (click)="getName('Anil', 34)">click me</button>
+<br> <br>
+<button (click)="getData('hello')">getData</button>
+<br> <br>
+
+<input type="text" name="test1" #box placeholder="event keyup" (keyup)="getData(box.value)">
+<br> <br>
+<textarea type="text" name="test1" #box2 placeholder="event keydown" (keydown)="getData(box2.value)">
+</textarea>
+<p>{{box2.value}}</p>
+
+<br>
+<h1 (mouseover)="getData('my name')">Saswata Mishra</h1>
