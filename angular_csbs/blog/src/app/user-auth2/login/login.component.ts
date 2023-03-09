@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  name: string = 'peter';
+  disablePasswd: boolean = false;
 }
