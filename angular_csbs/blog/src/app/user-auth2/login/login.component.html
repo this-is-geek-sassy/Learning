@@ -1,10 +1,13 @@
 <!-- <p class="heading">login works! -- really?</p>
 -->
 
-<form action="" method="get">
+<!-- <form action="" method="get">
     <label for="username">name</label>
     <input type="text" name="username" id="uname" value="{{name}}" disabled={{disablePasswd}}>
     <br>
     <label for="password">password</label>
     <input type="password" name="password" id="pwd" [value]=name [disabled]=disablePasswd>
-</form>
+</form> -->
+
+<p *ngFor="let item of users">name is: {{item}}</p>
+<p *ngFor="let item of userDetails">details is: {{item}}</p>
