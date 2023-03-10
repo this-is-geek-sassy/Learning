@@ -53,3 +53,17 @@
 <ng-template [ngIf]="color==='blue'">
     <h1 style="color: blue;">blue color</h1>
 </ng-template>
+
+<h3>Switch case:</h3>
+
+<span [ngSwitch]="color">
+    <p *ngSwitchCase="'red'" style="color: rgba(208, 78, 13, 0.811);">
+        Lorem ipsum dolor sit amet.
+    </p>
+    <p *ngSwitchCase="'green'" style="color: rgb(70, 216, 70);">
+        Lorem ipsum dolor sit amet.
+    </p>
+    <p *ngSwitchDefault>
+        Lorem ipsum dolor sit amet.
+    </p>
+</span>
