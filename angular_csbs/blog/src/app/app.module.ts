@@ -10,6 +10,7 @@ import { StudentPrefComponent } from './student-pref/student-pref.component';
 import { CountryListComponent } from './country-list/country-list.component';
 
 import { UserAuth2Module } from "./user-auth2/user-auth2.module";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserAuth2Module } from "./user-auth2/user-auth2.module";
     UserListComponent,
     UserPrefComponent,
     StudentPrefComponent,
-    CountryListComponent
+    CountryListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+nav img {
+    width: 50px;
+}
+
+nav {
+    background-color: #2E4F4F;
+    padding: 3px;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+li a{
+    color: #bec105;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    text-decoration: solid;
+    cursor: pointer;
+}
