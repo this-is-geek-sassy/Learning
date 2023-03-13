@@ -13,7 +13,11 @@ import { UserAuth2Module } from "./user-auth2/user-auth2.module";
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from "@angular/forms";
 import { Form1Component } from './form1/form1.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { Form1Component } from './form1/form1.component';
     BrowserModule,
     UserAuth2Module,
     FormsModule,
+    NoopAnimationsModule,
     // NgbModule
+    MatSlideToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

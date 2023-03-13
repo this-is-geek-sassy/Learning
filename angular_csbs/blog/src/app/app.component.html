@@ -21,6 +21,20 @@
 
 <h1 class="heading">Hello Angular {{number}} </h1>
 
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+<section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section>
+
 <button (click)="toggle()">Toggle</button>
 
 <h2 *ngIf="display">Functions in Angular</h2>
