@@ -47,4 +47,17 @@ export class LoginComponent {
     // this way of doing might not be the best and cleanest code to write.
     // take suggestion on this issue on how to write some getters and setters (if possible)
   }
+
+  justAnObject: object = {
+    name: "saswata mishra",
+    dob: "03-07-1999",
+    favColor: 'blue',
+
+    
+    // get getName() : string {
+    //   return `${this.}`;
+    // }
+    
+  };
+
 }
