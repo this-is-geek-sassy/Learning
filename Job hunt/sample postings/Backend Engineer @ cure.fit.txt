@@ -1,0 +1,26 @@
+Backend Engineer
+cure.fit (cult.fit) Bengaluru, Karnataka, India On-site 3 days ago Over 200 applicants
+
+Full-time · Mid-Senior level
+1,001-5,000 employees · Wellness and Fitness Services
+1 company alumni
+See how you compare to 1,823 applicants. Try Premium for free
+
+About the job
+Founded in 2016 by Mukesh Bansal and Ankit Nagori , Cure.fit is a mobile app that takes a holistic approach towards health and fitness by bringing together all aspects of a healthy lifestyle on a single platform. Cure.fit offers both online and offline experiences across fitness, nutrition and mental well-being through its 4 products, i.e. Cult.fit , Eat.fit , Mind.fit & Care.fit with the aim to make fitness fun and easy
+
+Responsibilities
+
+    Strong Technical Chops: You should know how to build highly scalable, robust, and fault-tolerant services that support our unique rate-of-growth requirements. You should be on top of the latest architectural trends.
+    Fast Learners: We are looking for folks who thrive on new technologies and don’t believe in one-size-fit all solutions. You should be able to adapt easily to meet the needs of our massive growth and rapidly evolving business environment
+    Design and Business Acumen: You understand requirements beyond the written word. Whether you’re working on an API used by other developers, an internal tool consumed by our operation teams, or a feature used by millions of customers, your attention to details leads to a delightful user experience.
+
+Skill Set
+
+    Programming, Scalable Systems, Computer Science,
+    Software Design, Performance Tuning,
+    Data Processing, API Servers.
+
+At Cure.fit , our mission is to “make health easy”. Through our products and services, we want to enable people to significantly improve their overall health, reduce the risk of lifestyle diseases and enable a long, disease free life. We are deeply passionate about health, fitness, and the general well-being and are eager to leverage the power of technology to help people live healthier, happier lives.
+
+In pursuit of this objective, we are always looking for excellent team members to fulfill the vision of building these incredible and innovative products. 
