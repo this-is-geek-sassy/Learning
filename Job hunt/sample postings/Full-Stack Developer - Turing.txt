@@ -1,0 +1,76 @@
+Full-Stack Developer
+Turing India Remote 18 hours ago 199 applicants
+
+Full-time · Entry level
+1,001-5,000 employees · IT Services and IT Consulting
+3 company alumni · 2 school alumni
+
+
+About the job
+A rapidly-growing company that is utilizing advanced Artificial Intelligence to build revolutionary tech products is looking for a Full-Stack Developer. The developer will be working together with product managers and designers to create superior applications. The company’s flagship product is enabling businesses to build their own flexible hourly workforce. This is a great opportunity for developers who enjoy working in a fast-paced environment while tackling multifaceted challenges.
+
+
+Job Responsibilities:
+
+
+    Write clean, maintainable, and well-documented code
+    Using TypeORM and NestJs, create and maintain RESTful web services and APIs.
+    Develop and maintain web and mobile applications
+    Take part in code reviews to make sure the code adheres to the highest quality standards
+    Build and keep up automated tests to guarantee software quality
+    Maintaining and enhancing application performance
+    Work in a fast-paced environment that includes daily standups and frequent camera-on sessions
+    Must be proactive and capable of taking charge of initiatives
+    Communicate effectively with team members and stakeholders
+
+
+Job Requirements:
+
+
+    Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+    At least 3+ years of relevant experience as a full-stack developer
+    Demonstrable experience with Nest.js, Angular, Angular Material, and Ionic Framework
+    Extensive knowledge of HTML/CSS/TypeScript/JavaScript, and MariaDB with TypeORM
+    Prior experience developing scalable, robust, and performant applications with a focus on user experience
+    Working experience with related test frameworks like Jest, Jasmine, Protractor, and Cypress
+    In-depth understanding of software development principles and design patterns
+    Prior experience developing RESTful web services and APIs using NestJs with TypeORM
+    Familiarity with Agile/Scrum methodologies
+    Nice to have some experience with Python and Microsoft Azure
+    Strong problem-solving skills and attention to detail
+    Excellent spoken and written English communication skills
+
+Set alert for similar jobs
+Full Stack Engineer, India
+About the company
+Turing company logo
+Turing
+208,041 followers
+Information Technology & Services 1,001-5,000 employees 1,577 on LinkedIn
+
+Traditional recruiting wasn’t designed for today’s software-first world. The old model is simply too slow, doesn’t allow for deep vetting and takes the control and ownership out of your hands. This is why we built Turing, the world’s most deeply vetted developers and teams, matched by AI. Turing connects world-class engineers with companies to help them achieve their respective career and business goals.
+
+Traditional recruiting is over. Welcome to the Talent Cloud.
+
+Turing enables:
+> companies to get matched to vetted remote talent at the touch of a button
+> developers to achieve their elite dream career from anywhere in the world
+
+400+ top companies, including Pepsi, Johnson & Johnson, and Dell, trust Turing's Talent Cloud for their engineering needs.
+
+Recruit Developers/Engineers:
+Turing combines AI and a global reach to deliver your ideal engineers tailored to your business needs. Our Talent Cloud matches you to rigorously vetted, quality remote developers.
+
+Try Turing.com for 2 weeks risk-free at turing.com
+
+Turing Careers:
+Turing helps you get excellent remote opportunities to build a high-growth career faster.
+
+Find high-quality remote U.S. software jobs across 15 roles and 100+ technologies.
+
+Apply today: turing.com/jobs
+
+—----------------------
+Co-founded by @Jonathan Siddarth and @Vijay Krishnan, Turing is an AI-powered technology company disrupting the traditional recruiting model for companies seeking to engage the most deeply vetted developers and teams.
+
+Having raised $140 million from investors, including WestBridge Capital, Foundation Capital, Stanford StartX, and execs from Google, Meta, Microsoft, and Amazon, Turing's last round was on a $4 billion valuation cap.
