@@ -11,9 +11,15 @@ p {
     margin: 1% 40%;
 }
 
+a {
+    color: white;
+}
+
 ul, li {
     color: white;
     background-color: rgba(9, 56, 156, 0.888);
     width: 30%;
     display: inline;
+    padding-top: 0.7%;
+    padding-bottom: 0.5em;
 }

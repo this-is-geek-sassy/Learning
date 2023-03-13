@@ -15,3 +15,9 @@
 h1 {
     text-align: center;
 }
+
+app-user-list#user-list1 {
+    /* margin-top: 40px;
+    padding-top: 40px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
