@@ -52,4 +52,11 @@ export class AppComponent {
   }
 
   color = 'red';
+
+  display: boolean = true;
+  toggle() {
+    // this.display = this.display ? false : true;
+
+    this.display = !this.display;
+  }
 }
