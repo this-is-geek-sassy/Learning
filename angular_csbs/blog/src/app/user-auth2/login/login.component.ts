@@ -16,27 +16,32 @@ export class LoginComponent {
     {
       name: this.users[0],
       email: this.users[0] + "@gmail.com",
-      phoneNumber: "6454"
+      phoneNumber: "6454",
+      socialAccounts: ['Linkedin', 'Twitter', 'Facebook']
     },
     {
       name: this.users[1],
       email: this.users[1] + "@gmail.com",
-      phoneNumber: "6453"
+      phoneNumber: "6453",
+      socialAccounts: ['Linkedin', 'Twitter', 'Facebook']
     },
     {
       name: this.users[2],
       email: this.users[2] + "@gmail.com",
-      phoneNumber: "6452"
+      phoneNumber: "6452",
+      socialAccounts: ['Linkedin', 'Twitter', 'Facebook']
     },
     {
       name: this.users[3],
       email: this.users[3] + "@gmail.com",
-      phoneNumber: "6450"
+      phoneNumber: "6450",
+      socialAccounts: ['Linkedin', 'Twitter', 'Facebook']
     },
     {
       name: this.users[4],
       email: this.users[4] + "@gmail.com",
-      phoneNumber: "6459"
+      phoneNumber: "6459",
+      socialAccounts: ['Linkedin', 'Twitter', 'Facebook']
     }
   ];
 
@@ -46,6 +51,14 @@ export class LoginComponent {
 
     // this way of doing might not be the best and cleanest code to write.
     // take suggestion on this issue on how to write some getters and setters (if possible)
+  }
+
+  getAttributeSocialAccounts(arrayitem: any) {
+    return arrayitem.socialAccounts;
+  }
+
+  accountLinks(accountname: string) {
+    return "www." + accountname + ".com";
   }
 
   justAnObject: object = {
@@ -59,5 +72,7 @@ export class LoginComponent {
     // }
     
   };
+
+
 
 }

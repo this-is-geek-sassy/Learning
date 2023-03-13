@@ -9,7 +9,17 @@
     <input type="password" name="password" id="pwd" [value]=name [disabled]=disablePasswd>
 </form> -->
 
+<span *ngFor="let user of userDetails">
+
+    <ul *ngFor="let account of getAttributeSocialAccounts(user)">
+        <li><a [href]="accountLinks(account)">{{ account }}</a></li>
+        <!-- why is it doing internal routing?? -->
+    </ul>
+
+</span>
+
 <!-- <p *ngFor="let item of users">name is: {{item}}</p> -->
 <p *ngFor="let item of userDetails">details is: {{ getAttributeName(item) }}</p>
 <!-- the issue is still persisting on angualr 15, Idk why: -->
-<!-- <p>{{ justAnObject.name }}</p> -->
+<!-- <p>{{ justAnObject?.name }}</p> -->
+
