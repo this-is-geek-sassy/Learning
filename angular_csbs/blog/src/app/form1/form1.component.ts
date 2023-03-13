@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 interface Alert {

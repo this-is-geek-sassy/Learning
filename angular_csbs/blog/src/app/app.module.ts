@@ -13,7 +13,7 @@ import { UserAuth2Module } from "./user-auth2/user-auth2.module";
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from "@angular/forms";
 import { Form1Component } from './form1/form1.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     UserAuth2Module,
     FormsModule,
-    NgbModule
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
