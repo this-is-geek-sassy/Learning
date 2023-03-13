@@ -9,7 +9,7 @@ import {NgForm} from '@angular/forms'
 export class Form1Component {
 
   getData(data: NgForm) {
-    console.log();
+    console.log(data);
   }
 
 }
