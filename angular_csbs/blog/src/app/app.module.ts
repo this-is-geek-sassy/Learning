@@ -11,6 +11,8 @@ import { CountryListComponent } from './country-list/country-list.component';
 
 import { UserAuth2Module } from "./user-auth2/user-auth2.module";
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from "@angular/forms";
+import { Form1Component } from './form1/form1.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { HeaderComponent } from './header/header.component';
     UserPrefComponent,
     StudentPrefComponent,
     CountryListComponent,
-    HeaderComponent
+    HeaderComponent,
+    Form1Component
   ],
   imports: [
     BrowserModule,
-    UserAuth2Module
+    UserAuth2Module,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

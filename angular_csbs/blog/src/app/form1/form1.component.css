@@ -1,0 +1,15 @@
+* {
+    margin: 5px;
+    min-width: fit-content;
+    max-width: 40%;
+}
+
+form {
+    border: 1px solid black;
+    padding-left: 4%;
+}
+
+label, input {
+    padding: 1%;
+    display: block;
+}
