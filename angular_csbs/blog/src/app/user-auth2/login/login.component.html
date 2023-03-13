@@ -9,5 +9,5 @@
     <input type="password" name="password" id="pwd" [value]=name [disabled]=disablePasswd>
 </form> -->
 
-<p *ngFor="let item of users">name is: {{item}}</p>
-<p *ngFor="let item of userDetails">details is: {{`item.name`}}</p>
+<!-- <p *ngFor="let item of users">name is: {{item}}</p> -->
+<p *ngFor="let item of userDetails">details is: {{ getAttributeName(item) }}</p>

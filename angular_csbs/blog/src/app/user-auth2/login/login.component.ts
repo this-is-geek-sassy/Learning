@@ -39,4 +39,12 @@ export class LoginComponent {
       phoneNumber: "6459"
     }
   ];
+
+  getAttributeName(arrayitem: any, property: string = 'name') {
+
+    return arrayitem.name;
+
+    // this way of doing might not be the best and cleanest code to write.
+    // take suggestion on this issue on how to write some getters and setters (if possible)
+  }
 }
