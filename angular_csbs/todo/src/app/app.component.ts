@@ -10,6 +10,8 @@ export class AppComponent {
 
   taskList: any[] = [];
 
+  data = 10;
+
   addTask(item: string) {
     // console.log(item);
     this.taskList.push({id: this.taskList.length, name: item});
@@ -18,5 +20,9 @@ export class AppComponent {
 
   removeTask(id: number) {
     this.taskList = this.taskList.filter(item => item.id !== id);
+  }
+
+  updateChild() {
+    this.data = Math.floor(Math.random()*1000);
   }
 }

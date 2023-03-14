@@ -8,3 +8,8 @@
 <ul *ngFor="let item of taskList">
   <li>{{item.name}} <button (click)="removeTask(item.id)">remove</button></li>
 </ul>
+
+<!-- invoking child compoent here: -->
+<app-child [item]="data"></app-child>
+<app-child [item]="data"></app-child>
+<button (click)="updateChild()">update child component</button>
