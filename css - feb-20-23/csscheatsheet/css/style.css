@@ -38,6 +38,26 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #dbdbdb;
+    background-color: #2256ff;
+    padding: 0.2rem;
+}
+
+/* tackling states of a tags */
+
+a:hover {
+    color: #f4f4f4;
+    background-color: #1c3fb1;
+}
+a:active {
+    color: greenyellow;
+}
+a:visited {
+    color: yellow;
+}
+
 .container {
     /* width: 960px; */
     width: 80%;
@@ -78,6 +98,25 @@ body {
 }
 
 .categories {
-    border: 1px rgb(192, 192, 192) solid;
+    border: 0.01cqmax rgb(192, 192, 192) solid;
     margin: 0.5%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.categories h2 {
+    text-align: center;
+}
+
+.categories ul {
+    padding-left: 0%;
+    list-style: none;
+    display: inline-flex;
+}
+
+.categories li {
+    padding: 0.45rem;
+    /* margin: 1px; */
+    /* list-style-image: url('../images/favicon-48x48.cbbd161b.png'); */
 }
