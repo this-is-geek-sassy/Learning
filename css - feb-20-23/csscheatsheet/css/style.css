@@ -49,13 +49,26 @@ a {
 
 a:hover {
     color: #f4f4f4;
-    background-color: #1c3fb1;
+    background-color: #a7bcff;
 }
 a:active {
     color: greenyellow;
 }
 a:visited {
     color: yellow;
+}
+
+.button {
+    border-radius: 6px;
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 3px 0px;
+    border-color: #c5d2ff;
+    width: 10%;
+}
+#href-button {
+    /* width: 40%; */
+    padding: 4px;
 }
 
 .container {
@@ -119,4 +132,34 @@ a:visited {
     padding: 0.45rem;
     /* margin: 1px; */
     /* list-style-image: url('../images/favicon-48x48.cbbd161b.png'); */
+}
+
+.my-form {
+    padding: 20px;
+}
+
+.my-form .form-group {
+    padding: 10px;
+    /* display: block; */
+}
+
+.my-form label{
+    display: block;
+}
+
+.my-form input[type="text"] {
+    padding: 5px;
+    border: 0.1rem #555555 solid;
+    width: 20%;
+}
+
+.my-form input[type="email"] {
+    padding: 5px;
+    border: 0.1rem #555555 solid;
+    width: 40%;
+}
+
+.my-form textarea {
+    width: 90%;
+    border: 0.1rem #555555 solid;
 }
