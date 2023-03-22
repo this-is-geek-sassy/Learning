@@ -50,6 +50,7 @@ a {
 a:hover {
     color: #f4f4f4;
     background-color: #a7bcff;
+    text-decoration: underline;
 }
 a:active {
     color: greenyellow;
