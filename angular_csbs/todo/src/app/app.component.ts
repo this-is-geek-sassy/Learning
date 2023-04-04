@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
 
-  @Input()  value!: number | string;
+  // @Input()  value!: number | string;
 
   title = 'Todo list on Anguar';
   textboxValue = '';
@@ -21,7 +21,7 @@ export class AppComponent {
     this.taskList.push({id: this.taskList.length, name: item});
     console.log(this.taskList);
     this.textboxValue = '';
-    this.value = this.textboxValue;
+    // this.value = this.textboxValue;
   }
 
   removeTask(id: number) {
