@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @Input()  value!: number | string;
+
   title = 'Todo list on Anguar';
+  textboxValue = '';
 
   taskList: any[] = [];
 
@@ -16,6 +20,8 @@ export class AppComponent {
     // console.log(item);
     this.taskList.push({id: this.taskList.length, name: item});
     console.log(this.taskList);
+    this.textboxValue = '';
+    this.value = this.textboxValue;
   }
 
   removeTask(id: number) {
