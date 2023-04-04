@@ -1,6 +1,8 @@
 <h2>{{ title }}</h2>
 
-<input type="text" name="task" #task placeholder="enter new tasks" value="">
+<input type="text" name="task" #task placeholder="enter new tasks" value="" 
+(keydown.enter)="addTask(task.value)">
+
 <br> <br>
 <button (click)="addTask(task.value)">add task</button>
 
