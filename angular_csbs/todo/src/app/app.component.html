@@ -21,3 +21,7 @@
 <ul *ngFor="let user of userDetails">
   <app-user-detail [item]="user"></app-user-detail>
 </ul>
+
+<br> <br>
+<app-child2 (updateDataEvent)="updateData($event)"></app-child2>
+<p>parent says that: {{__data}}</p>

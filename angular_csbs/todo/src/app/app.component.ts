@@ -33,7 +33,9 @@ export class AppComponent {
       name: 'Peter', 
       email: 'peter@test.com'
     }
-  ]
+  ];
+
+  __data = 'x';
 
   addTask(item: string) {
     // console.log(item);
@@ -49,5 +51,10 @@ export class AppComponent {
 
   updateChild() {
     this.data = Math.floor(Math.random()*1000);
+  }
+
+  updateData(item: string) {
+    console.log(item);
+    this.__data = item;
   }
 }
