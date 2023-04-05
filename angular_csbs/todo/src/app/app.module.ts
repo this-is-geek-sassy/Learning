@@ -7,6 +7,8 @@ import { ChildComponent } from './child/child.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { Child2Component } from './child2/child2.component';
 
+import { FormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { Child2Component } from './child2/child2.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

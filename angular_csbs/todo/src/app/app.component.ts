@@ -16,6 +16,8 @@ export class AppComponent {
 
   data = 10;
 
+  name: any;
+
   userDetails = [
     {
       name: 'Anil Kumar Majumdaar', 
