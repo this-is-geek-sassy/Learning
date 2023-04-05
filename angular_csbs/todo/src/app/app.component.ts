@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -9,10 +10,25 @@ export class AppComponent {
 
   // @Input()  value!: number | string;
 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    console.log(this.userJSON);
+    console.log(JSON.stringify(this.user));
+    console.log(typeof JSON.stringify(this.user));
+  }
+
   title = 'Todo list on Angular';
   textboxValue = '';
 
   today = new Date();
+
+  user = {
+    name: 'Anil',
+    age: 28
+  }
+
+  userJSON = new JsonPipe();
 
   taskList: any[] = [];
 
