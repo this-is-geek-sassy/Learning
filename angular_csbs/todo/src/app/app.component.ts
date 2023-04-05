@@ -9,8 +9,10 @@ export class AppComponent {
 
   // @Input()  value!: number | string;
 
-  title = 'Todo list on Anguar';
+  title = 'Todo list on Angular';
   textboxValue = '';
+
+  today = new Date();
 
   taskList: any[] = [];
 

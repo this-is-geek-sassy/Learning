@@ -1,4 +1,5 @@
-<h2>{{ title }}</h2>
+<h2>{{ title | lowercase | uppercase }}</h2>
+<p>{{today | date: 'fullDate'}}</p>
 
 <input type="text" name="task" #task placeholder="enter new tasks" [value]="textboxValue" 
 (keydown.enter)="addTask(task.value)">
