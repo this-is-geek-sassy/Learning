@@ -9,7 +9,7 @@ export class ChildComponent {
 
   constructor() { }
 
-  @Input() item = 0;  // item is catching the value passed by it's parent component 'app' through app's item property
+  @Input() item = 0;  // item is catching the value passed by it's parent component 'app' through app's item property, and 0 is its default value
 
   //ngOnInit(): void {
 
