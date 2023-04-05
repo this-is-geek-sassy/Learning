@@ -16,6 +16,25 @@ export class AppComponent {
 
   data = 10;
 
+  userDetails = [
+    {
+      name: 'Anil Kumar Majumdaar', 
+      email: 'anil@test.com'
+    },
+    {
+      name: 'Bhaskar', 
+      email: 'bhaskar@test.com'
+    },
+    {
+      name: 'Sam', 
+      email: 'sam@test.com'
+    },
+    {
+      name: 'Peter', 
+      email: 'peter@test.com'
+    }
+  ]
+
   addTask(item: string) {
     // console.log(item);
     this.taskList.push({id: this.taskList.length, name: item});

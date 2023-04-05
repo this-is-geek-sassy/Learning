@@ -16,4 +16,8 @@
 
 <button (click)="updateChild()">update child component</button>
 
-<app-user-detail></app-user-detail>
+
+<br> <br>
+<ul *ngFor="let user of userDetails">
+  <app-user-detail [item]="user"></app-user-detail>
+</ul>

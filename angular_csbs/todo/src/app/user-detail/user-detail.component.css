@@ -1,0 +1,20 @@
+li {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+    background-color: skyblue;
+    /* width: fit-content; */
+    width: 23%;
+    color: rgb(110, 123, 134);
+    margin-right: 4px;
+    border-left: 1px solid orange;
+    /* border-right: 1px solid orange; */
+}
+
+li#name{
+    color: rgb(155, 84, 84);
+    background-color: aliceblue;
+    /* width: fit-content; */
+    width: 17%;
+}
