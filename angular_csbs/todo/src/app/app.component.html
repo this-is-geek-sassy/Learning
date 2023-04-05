@@ -26,6 +26,6 @@
 <app-child2 (updateDataEvent)="updateData($event)"></app-child2>
 <p>parent says that: {{__data}}</p> -->
 
-<input type="text" name="textfield" id="textfield" [(ngModel)]="name">
-
+<input type="text" name="textfield" #textfield [(ngModel)]="name" placeholder="enter username">
+<button (click)="getVal(textfield)">call function</button>
 <p>{{name}}</p>

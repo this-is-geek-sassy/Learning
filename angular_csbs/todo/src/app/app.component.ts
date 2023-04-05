@@ -59,4 +59,8 @@ export class AppComponent {
     console.log(item);
     this.__data = item;
   }
+
+  getVal(item:any) {
+    console.log(item);
+  }
 }
