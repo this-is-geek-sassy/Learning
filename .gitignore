@@ -3,4 +3,4 @@ node_modules*
 *tmp
 .vscode/*
 angular/typescript demo/*.js
-*scientists-encyclopedia
+Projects/scientists-encyclopedia
