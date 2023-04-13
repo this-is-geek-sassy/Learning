@@ -1,0 +1,23 @@
+
+section {
+    width: auto;
+    /* display: inline; */
+}
+
+input {
+    display: flex;
+    margin: 5px 7%;
+    height: 20px;
+    width: 40cqmin;
+}
+
+button {
+    width: 3rem;
+    /* margin-left: 50px; */
+    margin: 5px 50px;
+    /* display: inline; */
+}
+
+#outsideLogin {
+    width: fit-content;
+}
