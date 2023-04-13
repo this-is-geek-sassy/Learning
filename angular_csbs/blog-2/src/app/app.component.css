@@ -1,12 +1,15 @@
 
 section {
-    width: auto;
+    width: 50%;
+    border-radius: 3px;
+    padding: 2px;
     /* display: inline; */
 }
 
 input {
     display: flex;
     margin: 5px 7%;
+    /* padding: 3px; */
     height: 20px;
     width: 40cqmin;
 }
@@ -20,4 +23,8 @@ button {
 
 #outsideLogin {
     width: fit-content;
+}
+
+.form-area {
+    background-color: rgb(190, 210, 189);
 }

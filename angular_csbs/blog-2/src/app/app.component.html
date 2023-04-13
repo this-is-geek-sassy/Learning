@@ -1,13 +1,25 @@
-<h1>{{ title }}</h1>
+<h3>{{ title }}</h3>
 
-<section>
+<!-- <section class="form-area">
   <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
     <input type="text" name="name" id="name" placeholder="enter name" ngModel>
-    <!-- <br><br> -->
+    
     <input type="password" name="password" id="pass" placeholder="enter password" ngModel>
 
     <button>login</button>
   </form>
 </section>
 
-<button (click)="userLogin(loginForm.value)" id="outsideLogin">outside login</button>
+<button (click)="userLogin(loginForm.value)" id="outsideLogin">outside login</button> -->
+
+<h3>{{ title2 }}</h3>
+
+<section class="form-area">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input type="text" name="user" id="user" placeholder="enter name" formControlName="user">
+
+    <input type="password" name="password" id="passwd" placeholder="enter password" formControlName="password">
+    
+    <button>login</button>
+  </form>
+</section>
