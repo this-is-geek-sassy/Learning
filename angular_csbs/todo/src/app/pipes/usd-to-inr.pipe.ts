@@ -7,8 +7,8 @@ export class UsdToInrPipe implements PipeTransform {
 
   transform(value: number, ...args: number[]): number {
 
-    const [x] = args;
-    return value*x;
+    const [x, y] = args;
+    return (value*x)+1;
   }
 
 }
