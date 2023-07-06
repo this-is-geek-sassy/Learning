@@ -16,8 +16,8 @@ console.log(person, person.firstName, person.lastName);
 console.log(`Second hobby : ${person.hobbies[1]}`);
 console.log(person.address.city);
 // alert(JSON.stringify(person));
-console.log(JSON.stringify(person).split(','))
-// console.log(JSON.stringify(person).split(/[{},]+/));
+console.log(JSON.stringify(person).split(','));
+console.log(JSON.stringify(person).split(/[{},]+/));
 
 
 // Destructuring:

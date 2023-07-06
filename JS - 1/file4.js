@@ -22,12 +22,19 @@ const todoJSON = JSON.stringify(todos);
 console.log(todoJSON);
 
 // for loop
+console.log('for loop');
 for (let i = 0; i < todos.length; i++) {
     const element = todos[i];
     console.log(element);
 }
 
-//while loop
+// while loop
+console.log('while loop');
+let i = 0;
+while (i<10) {
+    console.log(todos[i]);
+    i++;
+}
 
 //for of loop
 console.log(`For of loop:`);
@@ -37,9 +44,11 @@ for (const item of todos) {
 }
 
 // forEach, Map, filter
+
 console.log(`Array.forEach() metthod`);
-todos.forEach(function(todo_item){
+todos.forEach((todo_item) => {
     console.log(todo_item.text);
+    // return todo_item.text;  <-- this line does nothing
 });
 
 console.log(`Array.map() metthod`);
@@ -51,7 +60,7 @@ console.log(todo_text);
 console.log(`Array.filter method:`);
 const todoCompleted = todos.filter(function(todo_item) {
     return todo_item.isCompleted === true;
-}).map(function(todo_item) {
+}).map((todo_item) => {
     return todo_item.text;
 });
 console.log(todoCompleted);

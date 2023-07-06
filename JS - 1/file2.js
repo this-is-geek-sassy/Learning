@@ -30,7 +30,7 @@ console.log("The 'guava' element was never part of the array, so let's see what 
 console.log(`Is fruits an array? : ${Array.isArray(fruits)}`);
 
 // But what does typeof returs?
-console.log(`But what does typeof returs? : ${typeof fruits}`);
+console.log(`But what does typeof returns? : ${typeof fruits}`);
 
 
 // .indexof() method, to find index of something
