@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+    /* div~p {
+        background-color: salmon;
+    } */
+
+    /* div+p {
+        background-color: skyblue;
+    } */
+  
+     /* ul>li {
+        background-color: springgreen;
+    }   */
+
+    /* ul li {
+        background-color: tan;
+    }  */
+
+    /* pseudo class used to define special state of an element */
+    /* p:first-of-type{
+        background-color: violet;
+    }  */
+    /* p:last-of-type{
+        background-color: wheat;
+    }  */
+    /* p:first-child{
+         background-color: red;
+    }  */
+     /* p:only-of-type{
+        background-color: yellow;
+    }  */  
+      /* p:hover {
+        color: yellowgreen;
+    }  */
+
+    /* a:link {
+        color: blue;
+    }
+
+    a:active {
+        color: yellow;
+    }
+
+    a:visited {
+        color: purple;
+    }   */
+
+
+    /* psuedo element used to  style specified part of an element */
+ 
+   p::first-letter {
+        color: brown;
+        font-weight: 600;
+    } 
+
+
+    p::first-line {
+        color: red;
+    }
+
+    h3::before {
+        content: url('./images/flower.jpg');
+
+    }
+
+    h3::after {
+        content: url('./images/flower.jpg');
+    }  
+
+   
+</style>
+</head>
+
+<body>
+    <p>para 5 outside div
+        para 5 outside div
+         </p>
+    <div>
+        <p>this is para inside div1</p>
+
+        <p>para2 inside div1</p>
+
+        <h1>heading1</h1>
+
+        <div>
+            <p>para inside dive 2</p>
+        </div>
+
+        <!-- after div -->
+        <p>outside div para</p>
+        <p>para 2 outside div</p>
+
+    </div>
+    <!-- after div also after body as a parent-->
+    <p>para 3 outside div </p>
+    <!-- body as a parent -->
+    <p>para 4 outside div </p>
+    <h3>smile pls</h3>
+
+    <ul>
+        <li>
+            item1
+        </li>
+        <ol>
+            <li>
+                item2
+            </li>
+        </ol>
+
+        <li>
+            item3
+        </li>
+    </ul>
+    <a href="http://www.google.com">google</a><br>
+    <a href="http://www.twitter.com">TWITTER</a><br>
+    <a href="http://www.microsoft.com">Microsoft</a>
+    <a href="http://www.w3school.com">link</a>
+    <a href="http://www.facebook.com">link</a>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+button{
+    /* border-width: 2px;
+    border-style: solid;
+    border-color:pink; */
+
+    border:1px dotted red;
+    background-color: aqua;
+}

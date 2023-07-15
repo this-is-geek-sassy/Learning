@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://twitter.com" method="get" >
+        <fieldset>
+            <legend> PersonalDetails</legend>
+            <label for="fname">First Name:</label>
+            <input name="fname" type="text" placeholder="FirstName" required><br><br>
+
+            <label for="lname">Last Name:</label>
+            <input name="lname" type="text" placeholder="LatstName" required><br><br>
+
+            <label for="email">Email:</label>
+            <input name="email" type="email" placeholder="Email" required><br><br>
+
+            <label for="pws">Password:</label>
+            <input name="pws" type="password" placeholder="Password" required>
+        </fieldset>
+
+        <fieldset><legend>Address Details</legend></legend>
+        
+            <label for="city">City:</label>
+            <input name="city" type="text" placeholder="City" required><br><br>
+        
+            <label for="state">State:</label>
+            <input name="state" type="text" placeholder="State" required><br><br>
+        </fieldset>
+        <button id="btn" type="submit">Submit</button>
+        <button formaction="http://google.co.in" id="btn" type="submit" formnovalidate>Cancel</button>
+
+    </form>
+</body>
+
+</html>

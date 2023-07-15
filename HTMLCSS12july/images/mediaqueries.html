@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (orientation:landscape) {
+            body {
+                background-color: red;
+            }
+        }
+
+        #para {
+            border: 3px solid brown;
+        }
+
+        .wrapper {
+            border: 2px solid gray;
+            margin: 40px;
+            padding: 5px 10px;
+        }
+
+        @media only screen and (max-width:520px) {
+            #para {
+                border: none
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .one {
+                background-color: pink;
+            }
+        }
+
+        @media only screen and (min-width:800px) {
+            .two {
+                background-color: rgb(192, 204, 255);
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:900px) {
+            .three {
+                background-color: rgb(156, 226, 168);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">para</p>
+    <div class="wrapper one">This is div1</div>
+    <div class="wrapper two">This is div2</div>
+
+    <div class="wrapper three">This is div3</div>
+    <div class="wrapper four"> This is div4</div>
+    <div></div>
+</body>
+
+</html>

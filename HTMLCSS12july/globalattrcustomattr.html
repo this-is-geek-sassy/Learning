@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <article id="frame"
+    data-itemprice="24344"
+    data-itemcode="243"
+    data-itemcolor="pink"
+    > custom attribute</article>
+    <script>
+        let article=document.getElementById("frame")
+        document.write("ItemPrice",+article.dataset.itemprice +"</br>")
+        document.write("Itemcode",+article.dataset.itemcode)
+        document.write("Itemcolor",+article.dataset.itemcolor)
+    </script>
+    <!-- <p contenteditable="true" direction="ltr" spellcheck="true">Para</p> -->
+</body>
+</html>
