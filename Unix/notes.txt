@@ -1,1 +1,2 @@
 1. A good vim course: https://www.youtube.com/watch?v=RZ4p-saaQkc 
+2. One of many vim documentations: https://vimdoc.sourceforge.net/htmldoc/usr_toc.html 
