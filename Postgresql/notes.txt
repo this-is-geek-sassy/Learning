@@ -1,0 +1,3 @@
+1. Database su (super user user name and pwd for my syatem)
+	- su: postgres
+	- password: postgres
