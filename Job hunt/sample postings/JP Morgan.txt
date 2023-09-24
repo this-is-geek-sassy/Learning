@@ -1,0 +1,54 @@
+company logo
+JPMorgan Chase & Co.
+http://www.jpmorganchase.com/
+Lead Software Engineer
+2+ Years
+Onsite
+
+    Bengaluru (Karnataka)
+
+As per industry standard
+Last Date to Apply Sat Sep 30 2023
+About Company
+
+For over 200 years, JPMorgan Chase & Co has provided innovative financial solutions for consumers, small businesses, corporations, governments and institutions around the world.
+
+Today, we're a leading global financial services firm with operations servicing clients in more than 100 countries.
+
+Whether we are serving customers, helping small businesses, or putting our skills to work with partners, we strive to identify issues and propose solutions that will propel the future and strengthen both our clients and our communities.
+Job Description
+
+We have an opportunity to impact your career and provide an adventure where you can push the limits of what's possible.
+
+Job Summary:
+
+As a Software Engineer III for International Consumer Bank business unit at JPMorgan Chase, you will be responsible for helping  our teams deliver enhanced quality by ensuring the delivery of effective and efficiency test automation practice across the teams. They will also be responsible for carrying out critical tech solutions across multiple technical areas as an integral part of an agile team. 
+
+
+Job Responsibilities:
+
+    Being part of a squad and work on the sprint deliverables
+    Develop and execute test strategies and test plans and also automate tests building sufficient and meaningful test coverage
+    Developing from scratch or contributing to existing  testing frameworks and test infrastructure 
+    Integrating automated tests with CI/CD pipelines
+    Championing a quality and test mindset across unit, integration, functional, non-functional testing and developing metrics and trend analysis for testing activities
+    Triaging, analysing , and debugging issues and driving issues resolution with the team
+    Initiating and completing test escape and root cause analysis, testing lessons learned
+    Recommending test process improvements, defect prevention actions and working with teams in multiple locations in different time zones, review code PRs from the wider team.
+
+Required qualifications, capabilities, and skills:
+
+    Formal training, or certification on software engineering concepts and 5+ years applied experience
+    Strong programming skills in Java (additional experience in Javascript and/or Kotlin is a bonus)
+    Previous experience in application development is desirable
+    Experience building testing frameworks, tools, and automation using BDD practices using supporting test automation frameworks 
+    Back-end test automation experience using REST Assured, HTTP clients, libraries for working with JSON files and other tools relevant for test automation of APIs 
+    Mobile test automation experience using tools such as Cucumber, Appium, and Detox desirable, but not essential
+    Understanding of distributed systems, experience working with cloud technologies (e.g. AWS, GCP, Azure), relational and no-SQL databases.
+
+Preferred qualifications, capabilities, and skills:
+
+    Experience with Spring, Docker, and Kubernetes desirable and proven experience in all aspects of functional, integration and regression testing
+    Clean coding and adherence to the software engineering best practices (DRY, SOLID, etc.) with a focus on scalable and maintainable test execution infrastructure
+    Familiarity with the Atlassian toolset
+    Knowledge and experience working in an Agile environment.
