@@ -1,0 +1,17 @@
+cd
+pwd
+ls
+cp
+mv
+rm
+echo
+cat -> contatinate
+less -> used to read the contents of a text file one page (one screen) at a time.
+grep -> Search for PATTERN in each FILE or standard input.
+	PATTERN is, by default, a basic regular expression (BRE).
+	Example: grep -i 'hello world' menu.h main.c
+mkdir
+touch
+chmod
+man + help
+ 
