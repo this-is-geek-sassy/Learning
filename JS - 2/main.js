@@ -1,5 +1,6 @@
 // window is the top level object
-console.log(this); //  console.log(window);
+console.log(this); 
+console.log(window);
 
 // alert(1);
 
