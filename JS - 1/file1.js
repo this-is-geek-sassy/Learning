@@ -1,6 +1,7 @@
 // string properties and methods
 const s = 'Hello world!\n This is supposed to be the next line';
-window.console.log(s);
+// window.console.log(s);
+console.log(s);
 // console is an object of windpow api
 
 console.error("This is a sample error!");
