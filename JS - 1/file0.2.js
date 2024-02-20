@@ -5,7 +5,7 @@
  * 3. undefined
  * 4. Number: integer or floating point number both
  * 5. BigInt: Arbitary precision integer
- * 6. String
+ * 6. String : double or single quote
  * 7. Symbol: ES2015 addition, immutable
  * 
  * Other types are: Objects & functions
