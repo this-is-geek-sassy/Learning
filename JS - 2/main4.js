@@ -4,7 +4,7 @@ const emailInput = document.querySelector('#email');
 const msg = document.querySelector('.msg');
 const userList = document.querySelector('#users');
 
-console.log(userList);
+console.log(userList);   console.log(typeof userList);
 
 myForm.addEventListener('submit', onSubmit);
 
@@ -28,7 +28,14 @@ function onSubmit(event) {
 
     } else {
         console.log("form submit success!");
-        alert("form submit success!");
+        // alert("form submit success!");
+        msg.classList.add('success');
+        msg.innerHTML = "<p>Form submit is successful!</p>";
+
+        setTimeout(() => {
+            msg.remove();
+        }, 3000);
+
         const li = document.createElement('li');
         li.append(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
 

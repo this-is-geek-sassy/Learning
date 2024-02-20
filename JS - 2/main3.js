@@ -4,10 +4,10 @@ const btn = document.querySelector('.btn');
 btn.addEventListener('click', (event)=>{
     console.clear();
     event.preventDefault();
-    // console.log(event);
-    // console.log(event.target);
-    // console.log(event.target.className);
-    // console.log(event.target.id);
+    console.log(event);
+    console.log(event.target);
+    console.log(event.target.className);
+    console.log(event.target.id);
 
     document.querySelector('#my-form').style.background = '#ccc';
 
