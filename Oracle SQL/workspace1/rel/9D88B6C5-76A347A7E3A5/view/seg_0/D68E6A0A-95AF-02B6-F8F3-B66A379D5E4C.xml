@@ -1,0 +1,427 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="D68E6A0A-95AF-02B6-F8F3-B66A379D5E4C" schemaObject="7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F" name="EMP_DETAILS_VIEW">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_DETAILS_VIEW</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE OR REPLACE VIEW EMP_DETAILS_VIEW
+AS 
+SELECT
+  e.employee_id,
+  e.job_id,
+  e.manager_id,
+  e.department_id,
+  d.location_id,
+  l.country_id,
+  e.first_name,
+  e.last_name,
+  e.salary,
+  e.commission_pct,
+  d.department_name,
+  j.job_title,
+  l.city,
+  l.state_province,
+  c.country_name,
+  r.region_name
+FROM
+  employees e,
+  departments d,
+  jobs j,
+  locations l,
+  countries c,
+  regions r
+WHERE e.department_id = d.department_id
+  AND d.location_id = l.location_id
+  AND l.country_id = c.country_id
+  AND c.region_id = r.region_id
+  AND j.job_id = e.job_id
+]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="EMPLOYEE_ID" id="CEB497A2-A168-6A95-4D0D-0D8DE8FDACBD">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>EMPLOYEE_ID</alias>
+<dataType>NUMBER (6)</dataType>
+<headerAlias>EMPLOYEE_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>7086E0F5-3C62-56E4-8D86-76445E605AE0</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="JOB_ID" id="7634C504-BCF5-071C-00B6-71DA1E230F4D">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>JOB_ID</alias>
+<dataType>VARCHAR2 (10 BYTE)</dataType>
+<headerAlias>JOB_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>030DD974-676C-6CFE-E011-78584FCB27FA</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MANAGER_ID" id="38AA33B0-5D77-993C-E323-1070F6D98F97">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>MANAGER_ID</alias>
+<dataType>NUMBER (6)</dataType>
+<headerAlias>MANAGER_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>8038AD03-44C9-9967-65F1-094EECF22B65</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DEPARTMENT_ID" id="64F7E32D-B851-D4A9-78DF-4E7E8D75D5DA">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>DEPARTMENT_ID</alias>
+<dataType>NUMBER (4)</dataType>
+<headerAlias>DEPARTMENT_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>F09B9F86-7400-9E9E-3B70-C65FC0F76C36</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOCATION_ID" id="CF01DB6B-1EE0-F51D-B4A6-5190E7C1FB89">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>LOCATION_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LOCATION_ID</alias>
+<dataType>NUMBER (4)</dataType>
+<headerAlias>LOCATION_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>1D17775E-D78E-5931-7452-9B60DB1B3299</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="COUNTRY_ID" id="B7D28586-ED68-FB46-E071-F93A49C5CCE7">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>COUNTRY_ID</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>COUNTRY_ID</alias>
+<dataType>CHAR (2 BYTE)</dataType>
+<headerAlias>COUNTRY_ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>5C0B7454-25B0-DDA9-8150-A08D594F828E</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FIRST_NAME" id="682BA72D-36E1-3FFB-4737-A2AAFD2649BD">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>FIRST_NAME</alias>
+<dataType>VARCHAR2 (20 BYTE)</dataType>
+<headerAlias>FIRST_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>B6406CBF-F4A5-3ECA-B434-AD6E87175427</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LAST_NAME" id="9C1E0F51-3D3D-7556-09AA-3E7205F98F0E">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LAST_NAME</alias>
+<dataType>VARCHAR2 (25 BYTE)</dataType>
+<headerAlias>LAST_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>14EC5FB8-AA11-6F34-CA08-9EBA24317D33</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SALARY" id="53403813-381C-63B1-7658-ACC48F51E5E2">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>SALARY</alias>
+<dataType>NUMBER (8,2)</dataType>
+<headerAlias>SALARY</headerAlias>
+<reference>false</reference>
+<referencedColumn>4D6A4C63-22F7-293D-C63C-7BD8ECDC053C</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="COMMISSION_PCT" id="6C5ED25A-F93B-4E06-16C4-A8F78CC1A5F0">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>COMMISSION_PCT</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>COMMISSION_PCT</alias>
+<dataType>NUMBER (2,2)</dataType>
+<headerAlias>COMMISSION_PCT</headerAlias>
+<reference>false</reference>
+<referencedColumn>B43C5DEA-B1A9-C744-09E8-3FD89B249179</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DEPARTMENT_NAME" id="33BE6603-93C1-546A-3853-4F0C2D290112">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>DEPARTMENT_NAME</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>DEPARTMENT_NAME</alias>
+<dataType>VARCHAR2 (30 BYTE)</dataType>
+<headerAlias>DEPARTMENT_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>B0681484-DE13-F14E-969D-A2954272BCF7</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="JOB_TITLE" id="8145A834-227D-EC72-2323-0E912173CC4C">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>JOB_TITLE</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>JOB_TITLE</alias>
+<dataType>VARCHAR2 (35 BYTE)</dataType>
+<headerAlias>JOB_TITLE</headerAlias>
+<reference>false</reference>
+<referencedColumn>A6BBBD0F-8441-7EBC-A756-C02B23E0104F</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CITY" id="35EB6CA9-5817-E2EE-27AB-D6D5D4B61A9F">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>CITY</alias>
+<dataType>VARCHAR2 (30 BYTE)</dataType>
+<headerAlias>CITY</headerAlias>
+<reference>false</reference>
+<referencedColumn>79CC2FBB-5371-B7FA-EF19-FF1820A7EE38</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="STATE_PROVINCE" id="D269FA04-0793-F9D8-9F81-1E28077082C8">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>STATE_PROVINCE</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>STATE_PROVINCE</alias>
+<dataType>VARCHAR2 (25 BYTE)</dataType>
+<headerAlias>STATE_PROVINCE</headerAlias>
+<reference>false</reference>
+<referencedColumn>A55A550F-9049-A591-0C64-B7D97FC79A07</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="COUNTRY_NAME" id="F3B0AE1E-191D-9F27-A63F-A30D2294D1B1">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>COUNTRY_NAME</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>COUNTRY_NAME</alias>
+<dataType>VARCHAR2 (40 BYTE)</dataType>
+<headerAlias>COUNTRY_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>AD630A80-43B3-057E-4233-9585ABB8E583</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REGION_NAME" id="E95A12BB-3B99-D9EB-D8FB-EF2F2D3F6B3E">
+<sourceConnName>HR</sourceConnName>
+<sourceObjSchema>EMP_DETAILS_VIEW</sourceObjSchema>
+<sourceObjName>REGION_NAME</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>REGION_NAME</alias>
+<dataType>VARCHAR2 (25 BYTE)</dataType>
+<headerAlias>REGION_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>7CA5B0B0-0554-8ADF-799F-71DA2500C039</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7ACAEA28-79B7-E0CC-12B1-9267099F19F1">
+<container>true</container>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9F201B04-0C6D-8489-DD2D-F02EBCB84663">
+<container>true</container>
+<schema>HR</schema>
+<tableName>DEPARTMENTS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4A191811-48E1-D6CA-AEDB-884CC5778041">
+<container>true</container>
+<schema>HR</schema>
+<tableName>JOBS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="984E4E03-D3B2-C26B-0832-7979FC59D483">
+<container>true</container>
+<schema>HR</schema>
+<tableName>LOCATIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BDCF2E5F-6B90-3ECC-AA60-1C89B161A7F6">
+<container>true</container>
+<schema>HR</schema>
+<tableName>COUNTRIES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B6FE9537-F80F-FD99-CEB0-5890E80325E5">
+<container>true</container>
+<schema>HR</schema>
+<tableName>REGIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7086E0F5-3C62-56E4-8D86-76445E605AE0">
+<columnName>EMPLOYEE_ID</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="030DD974-676C-6CFE-E011-78584FCB27FA">
+<columnName>JOB_ID</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8038AD03-44C9-9967-65F1-094EECF22B65">
+<columnName>MANAGER_ID</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F09B9F86-7400-9E9E-3B70-C65FC0F76C36">
+<columnName>DEPARTMENT_ID</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1D17775E-D78E-5931-7452-9B60DB1B3299">
+<columnName>LOCATION_ID</columnName>
+<schema>HR</schema>
+<tableName>DEPARTMENTS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5C0B7454-25B0-DDA9-8150-A08D594F828E">
+<columnName>COUNTRY_ID</columnName>
+<schema>HR</schema>
+<tableName>LOCATIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B6406CBF-F4A5-3ECA-B434-AD6E87175427">
+<columnName>FIRST_NAME</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="14EC5FB8-AA11-6F34-CA08-9EBA24317D33">
+<columnName>LAST_NAME</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4D6A4C63-22F7-293D-C63C-7BD8ECDC053C">
+<columnName>SALARY</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B43C5DEA-B1A9-C744-09E8-3FD89B249179">
+<columnName>COMMISSION_PCT</columnName>
+<schema>HR</schema>
+<tableName>EMPLOYEES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B0681484-DE13-F14E-969D-A2954272BCF7">
+<columnName>DEPARTMENT_NAME</columnName>
+<schema>HR</schema>
+<tableName>DEPARTMENTS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A6BBBD0F-8441-7EBC-A756-C02B23E0104F">
+<columnName>JOB_TITLE</columnName>
+<schema>HR</schema>
+<tableName>JOBS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="79CC2FBB-5371-B7FA-EF19-FF1820A7EE38">
+<columnName>CITY</columnName>
+<schema>HR</schema>
+<tableName>LOCATIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A55A550F-9049-A591-0C64-B7D97FC79A07">
+<columnName>STATE_PROVINCE</columnName>
+<schema>HR</schema>
+<tableName>LOCATIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AD630A80-43B3-057E-4233-9585ABB8E583">
+<columnName>COUNTRY_NAME</columnName>
+<schema>HR</schema>
+<tableName>COUNTRIES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7CA5B0B0-0554-8ADF-799F-71DA2500C039">
+<columnName>REGION_NAME</columnName>
+<schema>HR</schema>
+<tableName>REGIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="00F30A33-0AA7-C3D9-51C1-0CE93C624988">
+<columnName>JOB_ID</columnName>
+<schema>HR</schema>
+<tableName>JOBS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4C55CAFC-5F5C-F92E-989D-FB7AB6C0278F">
+<columnName>REGION_ID</columnName>
+<schema>HR</schema>
+<tableName>COUNTRIES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CDF81D14-0DBA-D3E9-6E1C-7904C1700613">
+<columnName>DEPARTMENT_ID</columnName>
+<schema>HR</schema>
+<tableName>DEPARTMENTS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="48391964-48E7-CAAB-5188-E0ED84DD7559">
+<columnName>LOCATION_ID</columnName>
+<schema>HR</schema>
+<tableName>LOCATIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DEA0ED71-708A-E43A-A70C-BCCDA41A3EF0">
+<columnName>REGION_ID</columnName>
+<schema>HR</schema>
+<tableName>REGIONS</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="24EBB917-ED85-B681-AF38-9DF4E602E517">
+<columnName>COUNTRY_ID</columnName>
+<schema>HR</schema>
+<tableName>COUNTRIES</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

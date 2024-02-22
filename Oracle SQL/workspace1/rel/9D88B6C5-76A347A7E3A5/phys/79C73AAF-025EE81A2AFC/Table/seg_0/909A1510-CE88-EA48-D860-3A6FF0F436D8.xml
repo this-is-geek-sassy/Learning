@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="JOB_HISTORY" directorySegmentName="seg_0" id="909A1510-CE88-EA48-D860-3A6FF0F436D8">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:43 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E8B95F17-5EBF-21AD-565C-AF6C183EFA5D</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="JOB_ID" id="00272CCA-FB7C-C1D4-0B54-56FC488E5218">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="20BF49F8-71EA-943E-D3D5-3D12A18E7334">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="END_DATE" id="2240F0EE-2D21-C575-78A0-BD3EC1FDB9C0">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="START_DATE" id="23CC7DE9-5678-A29C-A065-D2BD97A90C93">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_ID" id="5D3652D0-45FC-7D68-05D0-5600DD6E1D59">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_EMP_ID_ST_DATE_PK" id="1C1CEE89-5200-BFD2-D550-D85ABC267FC1">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_JOB_IX" id="616396CD-80EA-6502-2E00-A18B13CEAA0B">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_EMPLOYEE_IX" id="95BFBE4E-CE21-4E45-FFDC-5FEB5508546E">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_DEPARTMENT_IX" id="E763155B-780E-8623-BAD8-0E25D9255FBC">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="JHIST_JOB_FK" id="7A727263-F092-6997-B6CA-F1061BF15A54">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="JHIST_DEPT_FK" id="AC93F997-93DD-D532-0521-87AE9FAE5ABB">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="JHIST_EMP_FK" id="B78249C6-EE4E-5782-1C4D-21BDFF19E8B9">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="JHIST_EMP_ID_ST_DATE_PK" id="7C52F624-814D-530E-98A1-1DE5714BADB8">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:45 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<existingIndex>1C1CEE89-5200-BFD2-D550-D85ABC267FC1</existingIndex>
+<indexSegment>9BBA749C-40BC-86BB-8148-E215CF943666</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="JHIST_DATE_INTERVAL" id="DF98EC8C-6046-0950-6095-E27051D22C48">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

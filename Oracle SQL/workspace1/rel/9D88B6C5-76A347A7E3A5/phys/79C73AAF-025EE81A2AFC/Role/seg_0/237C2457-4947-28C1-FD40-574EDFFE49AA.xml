@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="NEWROLE1" directorySegmentName="seg_0" id="237C2457-4947-28C1-FD40-574EDFFE49AA">
+<sourceConnName>HR</sourceConnName>
+<sourceObjName>NEWROLE1</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:49 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="3D1B5E6C-D40A-3786-C170-4B2EFEDB8CD7">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:49 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>7ACAEA28-79B7-E0CC-12B1-9267099F19F1</table>
+</Permission>
+</permissions>
+</RoleOraclev10g>

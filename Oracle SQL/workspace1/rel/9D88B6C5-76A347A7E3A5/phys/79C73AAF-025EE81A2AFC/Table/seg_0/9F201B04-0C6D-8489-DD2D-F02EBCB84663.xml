@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DEPARTMENTS" directorySegmentName="seg_0" id="9F201B04-0C6D-8489-DD2D-F02EBCB84663">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:43 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E8B95F17-5EBF-21AD-565C-AF6C183EFA5D</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LOCATION_ID" id="1D17775E-D78E-5931-7452-9B60DB1B3299">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_NAME" id="B0681484-DE13-F14E-969D-A2954272BCF7">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="CDF81D14-0DBA-D3E9-6E1C-7904C1700613">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="EC14F68E-9D60-610D-F0FC-45F73DCA69EA">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEPT_ID_PK" id="52FD9613-A2AB-892A-56A3-CB107C3D031C">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEPT_LOCATION_IX" id="BE55AA62-C4A0-0F03-A992-CB69A9A86A11">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="DEPT_LOC_FK" id="7D6853ED-22D3-AE73-8BBF-9033CC2451FD">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="DEPT_MGR_FK" id="D0FDCB4E-3EFB-927D-4AC6-791D65AA2757">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DEPT_ID_PK" id="68A27542-D34D-86B2-E5FC-A0182C1C5892">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:45 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<existingIndex>52FD9613-A2AB-892A-56A3-CB107C3D031C</existingIndex>
+<indexSegment>9BBA749C-40BC-86BB-8148-E215CF943666</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

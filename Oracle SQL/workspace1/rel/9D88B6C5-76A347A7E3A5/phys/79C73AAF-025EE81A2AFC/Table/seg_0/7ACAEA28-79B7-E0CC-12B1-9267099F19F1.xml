@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMPLOYEES" directorySegmentName="seg_0" id="7ACAEA28-79B7-E0CC-12B1-9267099F19F1">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:43 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E8B95F17-5EBF-21AD-565C-AF6C183EFA5D</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="JOB_ID" id="030DD974-676C-6CFE-E011-78584FCB27FA">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_NAME" id="14EC5FB8-AA11-6F34-CA08-9EBA24317D33">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="37947D7C-57B5-1853-E5C4-5F37739FE7DA">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HIRE_DATE" id="4D01329D-B875-538A-395B-037BFE93C4CF">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALARY" id="4D6A4C63-22F7-293D-C63C-7BD8ECDC053C">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_ID" id="7086E0F5-3C62-56E4-8D86-76445E605AE0">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="8038AD03-44C9-9967-65F1-094EECF22B65">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMISSION_PCT" id="B43C5DEA-B1A9-C744-09E8-3FD89B249179">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FIRST_NAME" id="B6406CBF-F4A5-3ECA-B434-AD6E87175427">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE_NUMBER" id="C36DE85D-C3C0-4697-BE13-986E7BBF6AFD">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="F09B9F86-7400-9E9E-3B70-C65FC0F76C36">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_EMAIL_UK" id="033802B8-A4E2-99D3-21A4-CE09D3BB1717">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_DEPARTMENT_IX" id="2ABF6BF4-2972-12B1-C4CB-8F901F34FFC7">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_EMP_ID_PK" id="3BDE6A84-F955-EA57-1612-5E1FE6DA1216">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_JOB_IX" id="5EE26B9F-D8F9-5D18-1961-69EF18896515">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_MANAGER_IX" id="A04EA497-147F-1547-31DE-E30911A2289C">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_NAME_IX" id="EB2EC8A2-E639-6A15-2B4F-048D15594A85">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:44 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<schemaObject>7BDE63C2-DAF6-3D27-D8E8-6614AEE8A26F</schemaObject>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_DEPT_FK" id="041F03AF-6848-4BB9-0986-CBB762A40304">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_JOB_FK" id="65381010-99E0-39B6-A8A8-58FCB9ED46D5">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_MANAGER_FK" id="933807D1-C9CF-08F3-CF06-03F020C972C8">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:48 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EMP_EMP_ID_PK" id="EE010546-59C7-BAF8-D1F1-FD82DE939519">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:45 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<existingIndex>3BDE6A84-F955-EA57-1612-5E1FE6DA1216</existingIndex>
+<indexSegment>9BBA749C-40BC-86BB-8148-E215CF943666</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="EMP_EMAIL_UK" id="36818C78-8F53-ABE0-6947-22BECF3E4A07">
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:45 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<segment>9BBA749C-40BC-86BB-8148-E215CF943666</segment>
+<tableSpace>57DE3478-790B-4B50-02E4-9A2DC5A7A42A</tableSpace>
+<existingIndex>033802B8-A4E2-99D3-21A4-CE09D3BB1717</existingIndex>
+<indexSegment>9BBA749C-40BC-86BB-8148-E215CF943666</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

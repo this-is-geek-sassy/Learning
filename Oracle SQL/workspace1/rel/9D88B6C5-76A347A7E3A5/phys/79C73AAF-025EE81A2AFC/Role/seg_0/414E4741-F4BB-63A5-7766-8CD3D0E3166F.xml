@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="SODA_APP" directorySegmentName="seg_0" id="414E4741-F4BB-63A5-7766-8CD3D0E3166F">
+<sourceConnName>HR</sourceConnName>
+<sourceObjName>SODA_APP</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+</RoleOraclev10g>

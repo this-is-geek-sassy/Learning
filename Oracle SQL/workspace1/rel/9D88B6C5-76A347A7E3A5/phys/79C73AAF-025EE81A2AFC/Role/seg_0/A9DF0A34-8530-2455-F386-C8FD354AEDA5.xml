@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="RESOURCE" directorySegmentName="seg_0" id="A9DF0A34-8530-2455-F386-C8FD354AEDA5">
+<sourceConnName>HR</sourceConnName>
+<sourceObjName>RESOURCE</sourceObjName>
+<createdBy>Saswata Mishra</createdBy>
+<createdTime>2024-02-22 11:44:41 UTC</createdTime>
+<ownerDesignName>workspace1</ownerDesignName>
+<nullInstance>true</nullInstance>
+<storableNullInstance>true</storableNullInstance>
+<privileges>CREATE SEQUENCE, CREATE PROCEDURE, CREATE CLUSTER, CREATE INDEXTYPE, CREATE OPERATOR, CREATE TYPE, CREATE TRIGGER, CREATE TABLE</privileges>
+<roles>414E4741-F4BB-63A5-7766-8CD3D0E3166F</roles>
+</RoleOraclev10g>
