@@ -15,3 +15,7 @@ ALTER USER USER1 ACCOUNT LOCK;
 create user user_random identified by "sample password" PASSWORD EXPIRE;
 
 create user shared1 IDENTIFIED BY shared1 CONTAINER=ALL;
+
+create user saswata IDENTIFIED BY saswata;
+grant create session to saswata;
+GRANT CONNECT TO SASWATA;
