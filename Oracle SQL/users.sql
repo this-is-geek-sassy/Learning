@@ -41,3 +41,4 @@ revoke newrole1 from saswata;
 
 create role newrole2 IDENTIFIED BY test;
 
+grant create any synonym to newrole1;
