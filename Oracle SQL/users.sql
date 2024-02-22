@@ -30,3 +30,14 @@ ALTER USER HR IDENTIFIED BY hr;
 
 -- Revoke privillage
 -- REVOKE CONNECT FROM SASWATA;
+
+create role newrole1;
+grant select on HR.employees to newrole1;
+
+create user user3;
+grant newrole1 to user3;
+grant newrole1 to saswata;
+revoke newrole1 from saswata;
+
+create role newrole2 IDENTIFIED BY test;
+

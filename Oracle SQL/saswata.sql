@@ -19,3 +19,4 @@ select sysdate from dual;
 insert into priv_test values(sysdate);
 select * from priv_test;
 
+select * from hr.employees;
