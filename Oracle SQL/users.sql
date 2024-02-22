@@ -11,3 +11,7 @@ ALTER USER USER1 ACCOUNT LOCK;
 
 -- DROP USER user1;
 -- drop user user1 cascade;
+
+create user user_random identified by "sample password" PASSWORD EXPIRE;
+
+create user shared1 IDENTIFIED BY shared1 CONTAINER=ALL;
