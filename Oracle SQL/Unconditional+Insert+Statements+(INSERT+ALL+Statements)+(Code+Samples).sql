@@ -14,6 +14,13 @@ CREATE TABLE employees_history AS
 CREATE TABLE salary_history AS
     SELECT employee_id, 1234 AS year, 12 AS month, salary, commission_pct
     FROM employees WHERE 1=2;
+    
+
+INSERT ALL
+    INTO EMPLOYEES_HISTORY VALUES (employee_id, first_name, last_name, hire_date)
+SELECT * FROM employees WHERE hire_date> TO_DATE('15-MAR-08');
+
+SELECT * FROM employees WHERE hire_date> TO_DATE('15-MAR-08');
 
 --Inserts all the returning rows into two different tables in one step
 INSERT ALL
