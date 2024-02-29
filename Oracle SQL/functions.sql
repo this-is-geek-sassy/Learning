@@ -30,3 +30,15 @@ select first_name, replace(first_name, 'le', '-') as replaced_output
 from employees;
 
 select mod(7,4) from dual;
+
+create table "Table this - that" (
+    name   varchar2(10),
+    "Memoy cap"  number(10)
+);
+
+info "Table this - that";
+
+select substr('John Jacob', instr('John Jacob', ' ')+1, 
+                length('John Jacob')) as "last name"   -- length function is optional here
+from dual;
+
