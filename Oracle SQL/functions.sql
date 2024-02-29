@@ -22,3 +22,10 @@ from employees;
 
 select first_name, replace(first_name, 'a') as replaced_output
 from employees;
+
+select first_name, replace(first_name, 'a', '-') as replaced_output
+from employees;
+
+select first_name, replace(first_name, 'le', '-') as replaced_output
+from employees;
+
