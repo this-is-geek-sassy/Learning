@@ -55,3 +55,6 @@ from employees )
 group by years_since_hired;
 
 select * from employees;
+
+select round(45.953, -1) from dual;
+select mod(2017, 30) from dual;
