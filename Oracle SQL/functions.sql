@@ -76,3 +76,15 @@ where to_char(hire_date, 'yy') != to_char(hire_date, 'rr');
 select employee_id, salary, NVL(COMMISSION_PCT, 0) as COMMISSION_PCT, 
         NVL(salary + (salary * COMMISSION_PCT), 0) as "Revised salary"
 from employees;
+
+select first_name, last_name, length(first_name), length(last_name)
+        from employees
+--where first_name is not null;
+where length(first_name) = length(last_name);
+
+select first_name, last_name, length(first_name), length(last_name)
+        from employees
+--where first_name is not null;
+where NULLIF (length(first_name), length(last_name)) IS NULL;
+
+select coalesce(null, null) from dual;
