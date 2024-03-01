@@ -87,4 +87,9 @@ select first_name, last_name, length(first_name), length(last_name)
 --where first_name is not null;
 where NULLIF (length(first_name), length(last_name)) IS NULL;
 
-select coalesce(null, null) from dual;
+select coalesce(null, null) from dual;'
+
+select avg(salary), job_id
+from employees
+group by job_id;
+
