@@ -58,3 +58,21 @@ select * from employees;
 
 select round(45.953, -1) from dual;
 select mod(2017, 30) from dual;
+
+-- implicit conversion from varchar2 to number value
+select * from employees where salary > '5000';
+
+-- implicit conversion from varchar2 to date value
+select * from employees where hire_date = '17-JUN-03';
+
+select department_id || ' ' || department_name from departments;
+desc employees;
+
+select first_name || ' ' || last_name, hire_date, 
+        to_char(hire_date, 'yyyy'), to_char(hire_date, 'yy'), to_char(hire_date, 'rr')
+        from employees
+where to_char(hire_date, 'yy') != to_char(hire_date, 'rr');
+
+select employee_id, salary, NVL(COMMISSION_PCT, 0) as COMMISSION_PCT, 
+        NVL(salary + (salary * COMMISSION_PCT), 0) as "Revised salary"
+from employees;
