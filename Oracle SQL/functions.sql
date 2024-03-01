@@ -93,3 +93,19 @@ select avg(salary), job_id
 from employees
 group by job_id;
 
+select avg(salary) as average_salary, job_id
+from employees
+group by job_id
+having avg(salary) > 10000;
+
+select avg(salary) as average_salary, job_id
+from employees
+group by job_id
+having avg(salary) > 10000;
+
+select avg(salary) as average_salary, job_id
+from employees
+where hire_date > '12-JUN-06'
+group by job_id
+having avg(salary) > 10000;
+
