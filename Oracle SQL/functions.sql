@@ -109,3 +109,22 @@ where hire_date > '12-JUN-06'
 group by job_id
 having avg(salary) > 10000;
 
+select * from tab;
+desc employees;
+desc departments;
+
+-- very similar to join / inner join
+select e.first_name, e.last_name, d.manager_id, d.department_name
+from employees e, departments d
+where e.department_id = d.department_id and e.manager_id = d.manager_id;
+
+-- inner join using on
+select e.first_name, e.last_name, d.manager_id, d.department_name
+from employees e JOIN departments d
+ON e.department_id = d.department_id and e.manager_id = d.manager_id;
+
+-- inner join using using
+select e.first_name, e.last_name, manager_id, d.department_name
+from employees e JOIN departments d
+USING (department_id, manager_id);
+
