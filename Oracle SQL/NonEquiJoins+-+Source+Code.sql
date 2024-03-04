@@ -32,7 +32,9 @@ BEGIN
 END;
 /
 --Step 3: Queries the table.
-SELECT * FROM payouts;
+SELECT * FROM payouts
+where payouts.employee_id = 100
+ORDER BY payouts.payment_date;
 /
 --Step 4: Computes a running total of a particular column using the Non-Equijoins
 SELECT p1.payment_date, p1.payout_amount, SUM(p2.payout_amount) AS total_payout
