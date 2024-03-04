@@ -128,3 +128,9 @@ select e.first_name, e.last_name, manager_id, d.department_name
 from employees e JOIN departments d
 USING (department_id, manager_id);
 
+select e1.employee_id, e1.first_name, e2.last_name
+from employees e1 JOIN employees e2
+ON e1.employee_id != e2.employee_id
+AND e1.first_name = e2.first_name
+AND e2.last_name = e1.last_name;
+
