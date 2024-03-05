@@ -1,8 +1,8 @@
 import java.time.Clock;
 
-public class Performance {
+public class StringBuilder {
     public static void main(String[] args) {
-        String series = "";
+        java.lang.StringBuilder builder = new java.lang.StringBuilder();
 
         Clock clock = Clock.systemDefaultZone();
         long systemClockTicks = clock.millis();
@@ -10,10 +10,10 @@ public class Performance {
         for (int i = 0; i < 26; i++) {
             char ch = (char)('a' + i);
             System.out.println(ch);
-            series += ch;
+            builder.append(ch);
         }
         long nextClockTicks = clock.millis();
-        System.out.println(series);
+        System.out.println(builder);
         System.out.println(nextClockTicks - systemClockTicks);
     }
 }
