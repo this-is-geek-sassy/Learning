@@ -1,4 +1,5 @@
 import java.time.Clock;
+import java.util.Arrays;
 
 public class Performance {
     public static void main(String[] args) {
@@ -15,5 +16,6 @@ public class Performance {
         long nextClockTicks = clock.millis();
         System.out.println(series);
         System.out.println(nextClockTicks - systemClockTicks);
+        System.out.println(Arrays.toString(series.split("")));
     }
 }
