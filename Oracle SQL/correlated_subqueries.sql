@@ -36,3 +36,16 @@ where (salary, department_id) IN (SELECT MAX(salary), department_id
                                     from employees b
                                     group by department_id);
 
+select * from tab;
+
+select * from jobs;
+
+-- views
+create or replace view v_jobs
+as
+    select *
+    from jobs
+    where min_salary > 400
+with check option;
+
+desc v_jobs;
