@@ -7,5 +7,9 @@ public class StaticNonStatic {
     }
     static {
         System.out.println("Another static block");
+        StaticNonStatic.method1();
+    }
+    static void method1() {
+        System.out.println("static method1 has been called");
     }
 }
