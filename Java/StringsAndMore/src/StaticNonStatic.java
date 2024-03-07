@@ -1,6 +1,10 @@
 public class StaticNonStatic {
+
+    static int num;
+
     public static void main(String[] args) {
         System.out.println("Hello world");
+        System.out.println(StaticNonStatic.num);   // will definitely return zero each time
     }
     static {
         System.out.println("One static block");
