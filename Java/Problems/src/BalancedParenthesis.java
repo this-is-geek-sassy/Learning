@@ -17,19 +17,31 @@ public class BalancedParenthesis {
             char c = balancedParenthesisString.charAt(i);
             if (c == '(') {
                 s.push("(");
-            } else {
+            } else if (c == ')' && s.peek().equals("(") ) {
+                s.pop();
+            } else if (c == '[') {
+                s.push("[");
+            } else if (c == ']' && s.peek().equals("[") ) {
+                s.pop();
+            } else if (c == '{') {
+                s.push("{");
+            } else if (c == '}' && s.peek().equals("{")) {
                 s.pop();
             }
         }
         if (s.empty())
             System.out.println("it is a string of balanced parenthesis");
-        else
+        else {
+            System.out.println(s.toString().substring(1,s.toString().length()-1));
             System.out.println("it is not a string of balanced parenthesis");
+        }
     }
     public static boolean checkString (String balancedParenthesisString) {
         for (int i = 0; i < balancedParenthesisString.length(); i++) {
             char c = balancedParenthesisString.charAt(i);
-            if (c != '(' && c!= ')')
+            if (c != '(' && c!= ')'
+                    && c != '[' && c!= ']'
+                    && c!= '{' && c != '}')
                 return false;
         }
         return true;
