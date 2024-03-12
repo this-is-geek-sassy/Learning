@@ -1,11 +1,12 @@
 package polymorphism;
 
-public class Macbook {
-
-    void start() {
+public class Macbook implements AppleLaptop{
+    @Override
+    public void start() {
         System.out.println("Macbook Booking up");
     }
-    void shutdown() {
+    @Override
+    public void shutdown() {
         System.out.println("Macbook shutting down");
     }
 }

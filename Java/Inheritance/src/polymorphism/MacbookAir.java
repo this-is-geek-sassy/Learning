@@ -2,12 +2,12 @@ package polymorphism;
 
 public class MacbookAir extends Macbook{
     @Override
-    void start() {
+    public void start() {
         System.out.println("Macbook air booting up");
     }
 
     @Override
-    void shutdown() {
+    public void shutdown() {
         System.out.println("Macbook air shutting down");
     }
 }
