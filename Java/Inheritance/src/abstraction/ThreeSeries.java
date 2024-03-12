@@ -1,6 +1,6 @@
 package abstraction;
 
-public class ThreeSeries extends BMW{
+public final class ThreeSeries extends BMW{
 
     @Override
     void accelerate() {
