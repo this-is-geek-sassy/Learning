@@ -4,14 +4,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class CheckedException {
-    public static void main(String[] args) {
-        try {
-            FileInputStream fis = new FileInputStream("");   // checked exception
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found!");
-        } finally {
-            System.out.println("This code is inside finally block");
-        }
+    public void readFile() throws FileNotFoundException {
+
+        FileInputStream fis = new FileInputStream("");   // checked exception
         System.out.println("More code can go here");
+    }
+    public static void main(String[] args) throws FileNotFoundException {
+        CheckedException ce = new CheckedException();
+        try {
+            ce.readFile();
+        } catch (FileNotFoundException e) {
+            System.out.println("Method is throwing a file not found exception");
+        }
     }
 }
