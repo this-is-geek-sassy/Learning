@@ -17,7 +17,7 @@ public class jdbc_test {
 		try {
 //			Class.forName("")
 			myConn = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/demo", "student", "Uwmcpaclwjk@03");
+					.getConnection("jdbc:mysql://localhost:3306/demo?useSSL=false", "student", "Uwmcpaclwjk@03");
 			
 			System.out.println("Connection successful");
 			
