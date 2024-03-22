@@ -22,7 +22,13 @@ public class jdbc_test {
             System.out.println("Connection successful");
 
             mySmt = myConn.createStatement();
-            myRes = mySmt.executeQuery("select * from employees");
+            long rowsAffected = mySmt.executeLargeUpdate("" +
+                    "insert into employees_duplicate " +
+                    "(last_name, first_name, email, department_id, salary, hire_date, job_id)" +
+                    "values" +
+                    "('Wright', 'Eric', 'eric.wright@foo.com', '40', 330000.00, '17-JUN-03', 'HR_REP')");
+
+            myRes = mySmt.executeQuery("select * from employees_duplicate");
 
             while (myRes.next()) {
                 System.out.println(myRes.getString("last_name") + ", " + myRes.getString("first_name"));
