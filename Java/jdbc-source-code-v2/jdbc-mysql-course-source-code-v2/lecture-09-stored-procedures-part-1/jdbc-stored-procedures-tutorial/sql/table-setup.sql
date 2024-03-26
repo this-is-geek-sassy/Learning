@@ -63,6 +63,7 @@ CREATE DEFINER=`student`@`localhost` PROCEDURE `greet_the_department`(INOUT depa
 BEGIN
 
 	SET department = concat('Hello to the awesome ', department, ' team!');
+    -- return department;
 
 END$$
 DELIMITER ;
