@@ -33,13 +33,13 @@ public class jdbc_test {
 			 * + myRes.getString("first_name")); }
 			 */
 			String department = "Engineering";
-			int increaseAmmount = 100;
+			int increaseAmount = 100;
 			
 			showSalaries(myConn, department);
 			
 			CallableStatement statement = myConn.prepareCall("{call increase_salaries_for_department(?, ?)}");
 			statement.setString(1, department);
-			statement.setDouble(2, increaseAmmount); 
+			statement.setDouble(2, increaseAmount);
 			
 			CallableStatement statement2 = myConn.prepareCall("{call greet_the_department(?)}");
 			statement2.registerOutParameter(1, Types.VARCHAR);
