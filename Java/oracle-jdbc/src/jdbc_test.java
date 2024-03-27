@@ -10,6 +10,12 @@ public class jdbc_test {
         Statement mySmt = null;
         ResultSet myRes = null;
 
+        String catalog = null;
+        String schemaPattern = null;
+        String tableNamePattern = null;
+        String columnNamePattern = null;
+        String[] types = null;
+
         try {
 //			Class.forName("")
             myConn = DriverManager
@@ -48,10 +54,33 @@ public class jdbc_test {
 
             myRes = mySmt.executeQuery("select * from employees_duplicate");
 
+            ResultSetMetaData resultSetMetaData = myRes.getMetaData();
+            int columnCount = resultSetMetaData.getColumnCount();
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.println("Column name: " + resultSetMetaData.getColumnName(i));
+                System.out.println("Column type: " + resultSetMetaData.getColumnTypeName(i));
+                System.out.println("is Nullable: " + resultSetMetaData.isNullable(i));
+                System.out.println("is AutoIncrement: " + resultSetMetaData.isAutoIncrement(i));
+                System.out.println();
+            }
+
             while (myRes.next()) {
+                System.out.println("Query result...");
                 System.out.println(myRes.getString("employee_id") + ", "
                         + myRes.getString("last_name") + ", "
                         + myRes.getString("first_name"));
+            }
+            DatabaseMetaData metaData = myConn.getMetaData();
+            System.out.println("Database meta data:");
+            System.out.println(metaData.getDatabaseProductName());
+            System.out.println(metaData.getDatabaseProductVersion());
+            System.out.println(metaData.getDriverName() + " " + metaData.getDriverVersion());
+
+            ResultSet resultSet = metaData.getTables(catalog,
+                                                    schemaPattern, tableNamePattern, types);
+            while (resultSet.next()) {
+                System.out.println(resultSet.getString("TABLE_NAME"));
+                //   code not working as expected with oracle db
             }
         }catch (Exception exc) {
             exc.printStackTrace();
