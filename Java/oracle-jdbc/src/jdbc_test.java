@@ -1,10 +1,11 @@
 //package jdbc_test;
 
+import java.io.*;
 import java.sql.*;
 
 public class jdbc_test {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, IOException {
 
         Connection myConn = null;
         Statement mySmt = null;
@@ -82,6 +83,34 @@ public class jdbc_test {
                 System.out.println(resultSet.getString("TABLE_NAME"));
                 //   code not working as expected with oracle db
             }
+            String updateResumeQuery = "Update employees_duplicate " +
+                                        "Set Resume = ? " +
+                                        "Where first_name = 'William' and last_name = 'Gietz'";
+            PreparedStatement preparedStatementToUpdateResume = myConn.prepareStatement(updateResumeQuery);
+            File resumeFile = new File("./GEMS_Learner_SOP.pdf");
+            FileInputStream input = new FileInputStream(resumeFile);
+
+            preparedStatementToUpdateResume.setBinaryStream(1, input);
+            int rowsAffectedByResumeInsert = preparedStatementToUpdateResume.executeUpdate();
+            if (rowsAffectedByResumeInsert >= 1) {
+                System.out.println("Resume Inserted");
+            }
+            // Reading BLOB:
+            Statement statementToReadResumeFromDB = myConn.createStatement();
+            String sqlToReadResume = "select resume from employees_duplicate\n" +
+                    "where first_name='William' and last_name='Gietz'";
+            ResultSet res = statementToReadResumeFromDB.executeQuery(sqlToReadResume);
+
+            OutputStream outputStream = new FileOutputStream(new File("./resume_read.pdf"));
+
+            while (res.next()) {
+                InputStream inputStream = res.getBinaryStream("resume");
+                byte[] buffer = new byte[150];
+                while (inputStream.read(buffer) > 0) {
+                    outputStream.write(buffer);
+                }
+            }
+
         }catch (Exception exc) {
             exc.printStackTrace();
         }

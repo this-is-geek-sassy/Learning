@@ -18,3 +18,9 @@ insert into employees_duplicate
 FROM employees_duplicate) + 1
 from dual);
 --order BY employee_id;
+
+alter table employees_duplicate
+add resume BLOB;
+
+select resume from employees_duplicate
+where first_name='William' and last_name='Gietz';
