@@ -2,6 +2,7 @@
 
 import java.io.*;
 import java.sql.*;
+import java.util.Properties;
 
 public class jdbc_test {
 
@@ -19,8 +20,15 @@ public class jdbc_test {
 
         try {
 //			Class.forName("")
+
+            Properties properties = new Properties();
+            properties.load(new FileInputStream("./application.properties"));
+            String dbUrl = properties.getProperty("dbUrl");
+            String user = properties.getProperty("user");
+            String password = properties.getProperty("password");
+
             myConn = DriverManager
-                    .getConnection("jdbc:oracle:thin:@tcp://localhost:1521/xepdb1", "hr", "hr");
+                    .getConnection(dbUrl, user, password);
 
             System.out.println("Connection successful");
 
