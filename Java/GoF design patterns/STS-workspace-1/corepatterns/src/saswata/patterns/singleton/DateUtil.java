@@ -1,7 +1,13 @@
 package saswata.patterns.singleton;
 
-public class DateUtil {
+import java.io.Serializable;
+
+public class DateUtil implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// Eager initialization
 	// private static DateUtil instance = new DateUtil();
 	private static volatile DateUtil instance;
