@@ -2,7 +2,7 @@ package saswata.patterns.singleton;
 
 import java.io.Serializable;
 
-public class DateUtil implements Serializable{
+public class DateUtil implements Serializable, Cloneable{
 	
 	/**
 	 * 
@@ -32,6 +32,16 @@ public class DateUtil implements Serializable{
 		}
 		
 		return instance;
+	}
+	
+	private Object readResolve() {
+		return instance;
+		
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		throw new CloneNotSupportedException("Not allowed to clone the object");
 	}
 
 }
