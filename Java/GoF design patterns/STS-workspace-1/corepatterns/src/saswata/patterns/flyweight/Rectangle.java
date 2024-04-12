@@ -1,11 +1,9 @@
 package saswata.patterns.flyweight;
 
-public class Rectangle implements Shape {
+public class Rectangle extends Shape {
 	
 	private String label;
-	private int length;
-	private int bredth;
-	private String fillStyle;
+	
 
 	public Rectangle() {
 		label = "rectangle";
@@ -19,32 +17,10 @@ public class Rectangle implements Shape {
 		this.label = label;
 	}
 
-	public int getLength() {
-		return length;
-	}
-
-	public void setLength(int length) {
-		this.length = length;
-	}
-
-	public int getBredth() {
-		return bredth;
-	}
-
-	public void setBredth(int bredth) {
-		this.bredth = bredth;
-	}
-
-	public String getFillStyle() {
-		return fillStyle;
-	}
-
-	public void setFillStyle(String fillStyle) {
-		this.fillStyle = fillStyle;
-	}
+	
 
 	@Override
-	public void draw() {
+	public void draw (int length, int bredth, String fillStyle) {
 		System.out.println("Drawing a " + label + " with length "
 				+ length + " bredth: " + bredth
 				+ " fill style: " + fillStyle);
