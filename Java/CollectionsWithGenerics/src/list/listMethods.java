@@ -31,5 +31,17 @@ public class listMethods {
         } else {
             System.out.println("list does not have the value");
         }
+
+        System.out.println("elements of the 1st list are:");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        boolean t;
+        t = list.remove(Integer.valueOf(333));
+        System.out.println(list);
+        System.out.println(t);
+        t = list.remove(Integer.valueOf(300));
+        System.out.println(list);
+        System.out.println(t);
     }
 }
