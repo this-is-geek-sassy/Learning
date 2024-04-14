@@ -16,5 +16,20 @@ public class listMethods {
 
         list.set(3, 200);  // replace element
         System.out.println(list);
+
+        List<Integer> secondList = new ArrayList<>();
+        secondList.add(111);
+        secondList.add(222);
+        secondList.add(333);
+        System.out.println("second list : " + secondList);
+
+        list.addAll(0, secondList);
+        System.out.println("first list after adding second list: " + list);
+
+        if(list.contains(122)){
+            System.out.println("list has the value");
+        } else {
+            System.out.println("list does not have the value");
+        }
     }
 }
