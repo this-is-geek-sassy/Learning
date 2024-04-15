@@ -12,8 +12,21 @@ public class DifferentSets {
         for (int i = 1; i <= 5; i++) {
             int number = obj.nextInt(100);
             set.add(number);
-            System.out.println(number);
+            System.out.println("adding number: " + number);
         }
         System.out.println("linked hashset elements: " + set);
+
+        Iterator itr = set.iterator();
+        while (itr.hasNext()) {
+            Object o = itr.next();
+            System.out.println(o);
+            if (o.getClass().isArray()){
+                for (int element : (Integer[])o) {
+                    System.out.println("inner array element: " + element);
+                }
+            }
+        }
+
+        System.out.println(set);
     }
 }
