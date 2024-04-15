@@ -18,7 +18,7 @@ public class ArrayListDemo {
             Object o = itr.next();
             System.out.println(o);
             if (o.getClass().isArray()){
-                for (int element : (int[])o) {
+                for (int element : (Integer[])o) {
                     System.out.println("inner array element: " + element);
                 }
             }
