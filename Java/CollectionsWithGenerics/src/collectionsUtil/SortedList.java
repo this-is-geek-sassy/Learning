@@ -20,5 +20,8 @@ public class SortedList {
         System.out.println("index is: " + result);
         result = Collections.binarySearch(l, "c");
         System.out.println("index is: " + result);  // insertion point: if not found
+
+        Collections.reverse(l);
+        System.out.println(l);
     }
 }
