@@ -13,6 +13,12 @@ public class SortedList {
         l.add("b");
         System.out.println("before sorting: " + l);
         Collections.sort(l);
+//        Collections.sort(l, new MyComparator());
         System.out.println("after sorting: " + l);
+
+        int result = Collections.binarySearch(l, "z");
+        System.out.println("index is: " + result);
+        result = Collections.binarySearch(l, "c");
+        System.out.println("index is: " + result);  // insertion point: if not found
     }
 }
