@@ -18,5 +18,13 @@ public class ArraySort {
         for (int elem: a)
             System.out.print(elem + " ");
         System.out.print("]\n");
+
+        String[] s = {"v", "a", "z", "p"};
+        Arrays.sort(s, new MyComparator());
+        System.out.println("after sort: ");
+        System.out.print("[");
+        for (String elem: s)
+            System.out.print(elem + " ");
+        System.out.print("]\n");
     }
 }
