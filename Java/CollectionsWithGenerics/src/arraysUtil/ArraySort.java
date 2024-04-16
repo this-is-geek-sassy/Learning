@@ -1,6 +1,7 @@
 package arraysUtil;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class ArraySort {
     public static void main(String[] args) {
@@ -26,5 +27,11 @@ public class ArraySort {
         for (String elem: s)
             System.out.print(elem + " ");
         System.out.print("]\n");
+
+        List<String> list = Arrays.asList(s);
+        System.out.println(list.getClass());
+        list.set(1, "ak");
+//        list.add("u");   // can't perform operations that can change size of the list
+        System.out.println(list);
     }
 }
