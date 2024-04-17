@@ -11,6 +11,7 @@ public class Test {
         for (PaymentType paymentType: paymentTypes) {
             System.out.println(paymentType);
             System.out.println(paymentType.ordinal());
+            System.out.println(paymentType.getFee());
         }
     }
 }
