@@ -9,5 +9,5 @@ public class MethodLevelGenerics {
     }
     public <T extends Runnable&Comparable<String>> void method3(T t) {
 
-    } 
+    }
 }
