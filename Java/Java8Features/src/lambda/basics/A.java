@@ -1,3 +1,5 @@
+package lambda.basics;
+
 @FunctionalInterface
 public interface A {
 

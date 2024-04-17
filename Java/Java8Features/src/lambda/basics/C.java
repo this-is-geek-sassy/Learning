@@ -1,4 +1,6 @@
-public class C implements A{
+package lambda.basics;
+
+public class C implements A {
 
 
     @Override
