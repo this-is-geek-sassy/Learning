@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ArrayListProblems {
     public static void main(String[] args) {
 
-        ArrayList<String> courses = new ArrayList<>();
+//        ArrayList<String> courses = new ArrayList<>();
+        CopyOnWriteArrayList<String> courses = new CopyOnWriteArrayList<>();
         courses.add("Java");
         courses.add("Python");
         courses.add("AWS");
@@ -19,5 +21,6 @@ public class ArrayListProblems {
                 courses.remove(course);   // again throws java.util.ConcurrentModificationException
             }
         }
+        System.out.println(courses);
     }
 }
