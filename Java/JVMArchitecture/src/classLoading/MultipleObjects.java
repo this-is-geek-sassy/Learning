@@ -13,5 +13,8 @@ public class MultipleObjects {
         System.out.println(c1.hashCode());
         System.out.println(c2.hashCode());
         System.out.println(c1 == c2);
+
+        System.out.println(c1.getClassLoader());
+        System.out.println(String.class.getClassLoader());
     }
 }
