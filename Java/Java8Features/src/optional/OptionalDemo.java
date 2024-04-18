@@ -9,9 +9,11 @@ public class OptionalDemo {
         Optional<String> optional = Optional.empty();
         System.out.println("Optional: " + optional);
         System.out.println(optional.isEmpty());
+        System.out.println(optional.get());   // throws NoSuchElementException
 
         Optional<String> data = Optional.of("Optional but very useful");
         System.out.println("data: " + data);
-        System.out.println(optional.isPresent());
+        System.out.println(data.isPresent());
+        System.out.println(data.get());
     }
 }
