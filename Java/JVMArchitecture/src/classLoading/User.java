@@ -1,3 +1,5 @@
+package classLoading;
+
 public class User {
 
     public String getName() {
