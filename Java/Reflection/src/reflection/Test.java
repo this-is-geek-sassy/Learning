@@ -33,5 +33,9 @@ public class Test {
         double num1 = (double) getNum1.invoke(createdObjectUsingParameterizedConstructor, null);
         System.out.println("num1: " + num1);
 //        System.out.println(getNum1.invoke(createdObjectUsingParameterizedConstructor, null));
+
+        Method setNum1 = myClass.getMethod("setNum1", double.class);
+        setNum1.invoke(createdObjectUsingParameterizedConstructor, 45.3);
+        System.out.println("createdObjectUsingParameterizedConstructor: " + createdObjectUsingParameterizedConstructor);
     }
 }
