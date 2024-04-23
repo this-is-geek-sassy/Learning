@@ -2,6 +2,7 @@ package reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class Test {
@@ -22,5 +23,15 @@ public class Test {
         Constructor<?> defaultConstructor = myClass.getConstructor( null);
         Calculator createdObject = (Calculator) defaultConstructor.newInstance(null);
         System.out.println(createdObject);
+
+        // access parameterized constructor
+        Constructor<?> parameterizedConstructor = myClass.getConstructor(double.class, double.class);
+        Calculator createdObjectUsingParameterizedConstructor = (Calculator) parameterizedConstructor.newInstance(4.8, 3.2);
+        System.out.println(createdObjectUsingParameterizedConstructor);
+
+        Method getNum1 =  myClass.getMethod("getNum1", null);
+        double num1 = (double) getNum1.invoke(createdObjectUsingParameterizedConstructor, null);
+        System.out.println("num1: " + num1);
+//        System.out.println(getNum1.invoke(createdObjectUsingParameterizedConstructor, null));
     }
 }
