@@ -29,4 +29,12 @@ public class Calculator {
     public void setNum2(double num2) {
         this.num2 = num2;
     }
+
+    @Override
+    public String toString() {
+        return "Calculator{" +
+                "num1=" + num1 +
+                ", num2=" + num2 +
+                '}';
+    }
 }

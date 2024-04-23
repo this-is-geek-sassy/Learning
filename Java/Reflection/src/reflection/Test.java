@@ -1,11 +1,12 @@
 package reflection;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
 public class Test {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
 
         Class<?> myClass = Class.forName(Calculator.class.getName());
         System.out.println(myClass.getName());
@@ -15,5 +16,11 @@ public class Test {
         // if there are only private constructors, it will return an empty array.
         // if there are public constructors, it will show the array with elements being constructor signatures
         System.out.println(Arrays.toString(myClass.getMethods()));
+
+
+        // access default constructor
+        Constructor<?> defaultConstructor = myClass.getConstructor( null);
+        Calculator createdObject = (Calculator) defaultConstructor.newInstance(null);
+        System.out.println(createdObject);
     }
 }
