@@ -44,5 +44,11 @@ public class Test {
 
 //        Field num1Field = myClass.getField("num1");
 //        System.out.println(num1Field);
+
+        Field num1Field = myClass.getDeclaredField("num1");
+        num1Field.setAccessible(true);
+        num1Field.set(createdObjectUsingParameterizedConstructor, 300);
+        double newNum1Value = (double) num1Field.get(createdObjectUsingParameterizedConstructor);
+        System.out.println(newNum1Value);
     }
 }
