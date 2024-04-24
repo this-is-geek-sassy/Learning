@@ -1,13 +1,14 @@
 package reflection;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class Test {
 
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
 
         Class<?> myClass = Class.forName(Calculator.class.getName());
         System.out.println(myClass.getName());
@@ -37,5 +38,11 @@ public class Test {
         Method setNum1 = myClass.getMethod("setNum1", double.class);
         setNum1.invoke(createdObjectUsingParameterizedConstructor, 45.3);
         System.out.println("createdObjectUsingParameterizedConstructor: " + createdObjectUsingParameterizedConstructor);
+
+        Method sum = myClass.getMethod("sum", int.class, int.class);
+        System.out.println(sum.invoke(createdObjectUsingParameterizedConstructor, 3, 4));
+
+//        Field num1Field = myClass.getField("num1");
+//        System.out.println(num1Field);
     }
 }
