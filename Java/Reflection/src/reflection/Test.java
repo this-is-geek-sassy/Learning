@@ -1,5 +1,6 @@
 package reflection;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -50,5 +51,8 @@ public class Test {
         num1Field.set(createdObjectUsingParameterizedConstructor, 300);
         double newNum1Value = (double) num1Field.get(createdObjectUsingParameterizedConstructor);
         System.out.println(newNum1Value);
+
+        Annotation[] annotations = myClass.getAnnotations();
+        System.out.println(Arrays.toString(annotations));
     }
 }
