@@ -54,5 +54,8 @@ public class Test {
 
         Annotation[] annotations = myClass.getAnnotations();
         System.out.println(Arrays.toString(annotations));
+        MyAnnotation annotation = (MyAnnotation) annotations[0];
+        System.out.println("annotation.value1(): " + annotation.value1());
+        System.out.println("annotation.value2(): " + annotation.value2());
     }
 }

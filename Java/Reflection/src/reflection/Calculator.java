@@ -1,6 +1,6 @@
 package reflection;
 
-@MyAnnotation
+@MyAnnotation(value1 = "123.00", value2 = "456")
 public class Calculator {
 
     private double num1;
