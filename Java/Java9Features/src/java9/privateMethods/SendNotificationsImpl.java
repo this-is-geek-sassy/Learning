@@ -6,6 +6,6 @@ public class SendNotificationsImpl implements SendNotifications{
 
         SendNotifications sendNotifications = new SendNotificationsImpl();
         sendNotifications.sendNotification();
-        sendNotifications.sendNotifications();
+        SendNotifications.sendNotifications();
     }
 }

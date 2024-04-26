@@ -2,7 +2,7 @@ package java9.privateMethods;
 
 public interface SendNotifications {
 
-    default void sendNotifications() {
+    static void sendNotifications() {
         establishConnection();
         System.out.println("sending multiple notifications");
     }
@@ -12,7 +12,7 @@ public interface SendNotifications {
         System.out.println("sending multiple notification");
     }
 
-    private void establishConnection() {
+    private static void establishConnection() {
         System.out.println("establishing a connection");
     }
 }
