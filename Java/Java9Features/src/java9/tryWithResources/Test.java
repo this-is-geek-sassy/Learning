@@ -1,4 +1,4 @@
-package tryWithResources;
+package java9.tryWithResources;
 
 public class Test {
 
