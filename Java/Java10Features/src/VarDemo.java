@@ -23,11 +23,10 @@ public class VarDemo {
 
 //        var s = null;    // not permesible
 
-        var l = (i) -> {
-            System.out.println(i);
-        };
+        Consumer<Integer> l = System.out::println;
+        l.accept(32);
 
-        Consumer<Integer> l = (i) -> {
+        Consumer<Integer> l2 = (i) -> {
             System.out.println(i);
         };
     }
