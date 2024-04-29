@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 public class VarDemo {
 
@@ -19,5 +20,15 @@ public class VarDemo {
             var value = entry.getValue();
             System.out.println(value);
         }
+
+//        var s = null;    // not permesible
+
+        var l = (i) -> {
+            System.out.println(i);
+        };
+
+        Consumer<Integer> l = (i) -> {
+            System.out.println(i);
+        };
     }
 }
