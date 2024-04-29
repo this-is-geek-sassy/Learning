@@ -1,4 +1,4 @@
 module PatientManagement {
 
-    exports pr;
+    exports pr to PatientClinicals, PatientBilling;
 }
