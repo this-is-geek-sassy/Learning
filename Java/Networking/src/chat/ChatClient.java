@@ -7,13 +7,14 @@ public class ChatClient {
 
     public static void main(String[] args) {
 
-        try {
+        try(
+                Socket socket = new Socket("localhost", 9090);
+                DataInputStream in = new DataInputStream(socket.getInputStream());
+                DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-            Socket socket = new Socket("localhost", 9090);
-            DataInputStream in = new DataInputStream(socket.getInputStream());
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        ) {
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
             String messageReceived = "", messageToSend = "";
             while (true) {
@@ -27,12 +28,6 @@ public class ChatClient {
                 messageReceived = in.readUTF();
                 System.out.println("server says: " + messageReceived);
             }
-
-            bufferedReader.close();
-            out.close();
-            in.close();
-            socket.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -9,14 +9,15 @@ public class ChatServer {
 
     public static void main(String[] args) {
 
-        try {
-            ServerSocket serverSocket = new ServerSocket(9090);
-            System.out.println("Server is ready to chat");
-            Socket socket = serverSocket.accept();
-            DataInputStream in = new DataInputStream(socket.getInputStream());
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+        try(
+                ServerSocket serverSocket = new ServerSocket(9090);
+                Socket socket = serverSocket.accept();
+                DataInputStream in = new DataInputStream(socket.getInputStream());
+                DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        ) {
+            System.out.println("Server is ready to chat");
 
             String messageReceived = "", messageToSend = "";
             while (true) {
@@ -32,12 +33,6 @@ public class ChatServer {
 
                 out.flush();
             }
-
-            bufferedReader.close();
-            out.close();
-            in.close();
-            socket.close();
-            serverSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
