@@ -11,6 +11,7 @@ public class ChatServer {
 
         try {
             ServerSocket serverSocket = new ServerSocket(9090);
+            System.out.println("Server is ready to chat");
             Socket socket = serverSocket.accept();
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
