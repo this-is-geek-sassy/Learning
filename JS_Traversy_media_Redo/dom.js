@@ -26,3 +26,25 @@ console.log(headerTitle.textContent);
 header.style.borderBottom = "solid 3px black";
 
 // 26:05 
+// getElementsByClassName  //
+let items = document.getElementsByClassName('list-group-item');
+console.log(items);
+// items[1].textContent = "saswata";
+console.log(items[0].innerHTML);
+
+for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    item.style.backgroundColor = '#ccc';
+}
+
+// querySelector or querySelectorAll
+
+let header2 = document.querySelector('header#main-header');
+console.log(header2);
+let input = document.querySelector('input');
+console.log(input);
+input.value = "my custom value";
+
+let submit = document.querySelector('input[type="submit"]');
+console.log(submit);
+submit.value = "send";
