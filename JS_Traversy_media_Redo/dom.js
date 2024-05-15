@@ -48,3 +48,55 @@ input.value = "my custom value";
 let submit = document.querySelector('input[type="submit"]');
 console.log(submit);
 submit.value = "send";
+
+
+// part 2
+var itemList = document.querySelector("#items");
+// parent node 
+console.log(itemList.parentNode);
+itemList.parentElement.style.backgroundColor = "#ffd4ff";  //light pink
+// console.log(itemList.parentNode.parentElement.parentNode);
+
+// parentNode & parentElement
+// ....
+
+// childNodes
+console.log(itemList.childNodes);
+console.log(itemList.children);
+console.log(itemList.children[1].style.backgroundColor = "purple");
+
+
+// firstchild
+console.log(itemList.firstChild);
+// firstElementChild
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent = 'hello 1';
+
+// lastchild
+console.log(itemList.lastChild);
+// lastElementChild
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = 'hello n';
+
+// siblings
+console.log(itemList.nextSibling);
+console.log(itemList.nextElementSibling);
+console.log(itemList.previousSibling);
+console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = "green";
+
+// createElement
+// create a div
+var newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+newDiv.setAttribute('title', 'hello div');
+
+var newDivText = document.createTextNode("hello world");
+newDiv.appendChild(newDivText);
+console.log(newDiv);
+
+var container = document.querySelector('header .container');
+var rowDiv = document.querySelector('header div .row');
+
+container.insertBefore(newDiv, rowDiv);
