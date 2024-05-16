@@ -70,13 +70,13 @@ console.log(itemList.children[1].style.backgroundColor = "purple");
 console.log(itemList.firstChild);
 // firstElementChild
 console.log(itemList.firstElementChild);
-itemList.firstElementChild.textContent = 'hello 1';
+// itemList.firstElementChild.textContent = 'hello 1';
 
 // lastchild
 console.log(itemList.lastChild);
 // lastElementChild
 console.log(itemList.lastElementChild);
-itemList.lastElementChild.textContent = 'hello n';
+// itemList.lastElementChild.textContent = 'hello n';
 
 // siblings
 console.log(itemList.nextSibling);
@@ -99,4 +99,85 @@ console.log(newDiv);
 var container = document.querySelector('header .container');
 var rowDiv = document.querySelector('header div .row');
 
-container.insertBefore(newDiv, rowDiv);
+// container.insertBefore(newDiv, rowDiv);
+
+// Events:-
+// (part 3)
+
+// var button = document.getElementById('button').addEventListener('click', function (params) {
+//     console.log("button clicked 2", params);
+// });
+
+// var button = document.getElementById('button').addEventListener('click', buttonClick);
+
+function buttonClick(params) {
+    console.log("button clicked");
+    console.log(params);
+    console.log(params.target);
+    console.log(params.target.id);
+    console.log(params.target.className);
+    console.log(params.target.classList);
+
+    document.getElementById('header-title').textContent = 'Changed';
+    document.querySelector('#main').style.backgroundColor = '#fff';
+
+    var output = document.getElementById('output');
+    output.innerHTML = '<h3>'+ params.target.id + '</h3>';
+
+    console.log(params.type);
+    console.log(params.clientX);
+    console.log(params.clientY);
+    console.log(params.offsetX, params.offsetY);
+    console.log(params.altKey);
+}
+
+var button = document.getElementById('button');
+// button.addEventListener('click', runEvent);
+// button.addEventListener('dblclick', runEvent);
+// button.addEventListener('mousedown', runEvent);
+button.addEventListener('mouseup', runEvent);
+
+
+
+var box = document.getElementById('box');
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+box.addEventListener('mousemove', runEvent);
+
+let item2 = document.querySelector('ul#items').children[1];
+console.log(item2.style.backgroundColor);
+
+let itemInput = document.querySelectorAll('input[type="text"]');
+let form = document.querySelector('form');
+// console.log(itemInput.item(1));
+let targetTextBox = itemInput.item(1);
+console.log(targetTextBox);
+console.log(form);
+targetTextBox.addEventListener("keyup", keyboardEvent);
+// itemInput.addEventListener("keyup", runEvent);
+
+// new KeyboardEvent("keydown")
+
+function runEvent(e) {
+    console.log("Event type: " + e.type);
+    console.log(e);
+
+    let item2 = document.querySelector('ul#items').children[1];
+    // console.log(item2.style.backgroundColor);
+    let red = ((e.screenX + e.screenY) / 2) % 255;
+    let green = ((e.screenX**2 + e.screenY**2) / 2) % 255;
+    let blue = ((e.screenX**2 - e.screenY**2) / 2) % 255;
+    let mean = (red + blue + green) / 3;
+    mean = 255 - mean;
+
+    item2.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+    item2.style.color = "rgb(" + mean + ", " + mean + ", " + mean + ")";
+}
+
+function keyboardEvent(e) {
+    console.log("Event type: " + e.type);
+    console.log(e.target);
+    console.log(e.target.value);
+
+    document.getElementById('output').innerHTML = "<p>" + e.target.value + "</p>";
+}
