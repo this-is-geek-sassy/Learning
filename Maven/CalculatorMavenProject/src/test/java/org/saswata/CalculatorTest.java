@@ -1,6 +1,11 @@
 package org.saswata;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,6 +21,15 @@ class CalculatorTest {
     @AfterAll
     static void cleanup() {
         System.out.println("performing cleanup of all resources after tests are performed");
+    }
+
+    @org.jetbrains.annotations.NotNull
+    private static Stream<Arguments> integerSubtraction() {
+        return Stream.of(
+                Arguments.of(33, 1, 32),
+                Arguments.of(54, 1, 53),
+                Arguments.of(23, 1, 22)
+        );
     }
 
     @BeforeEach
@@ -66,14 +80,16 @@ class CalculatorTest {
         assertEquals(expectedExceptionMessage, actualException.getMessage(), "unexpected exception message");
     }
 
-    @DisplayName("test 33-1=32")
-    @Test
-    public void integerSubtraction() {
-        System.out.println("Performing 33-1=32");
+    @DisplayName("test integer subtraction")
+    @ParameterizedTest
+//    @MethodSource("integerSubtractionInputParameters")
+    @MethodSource
+    public void integerSubtraction(int minuend, int subtrahend, int expectedResult) {
+        System.out.println("Performing " + minuend + "-" + subtrahend + "=" + expectedResult);
 //        Calculator calculator = new Calculator();
-        int minuend = 33;
-        int subtrahend = 1;
-        int expectedResult = 32;
+//        int minuend = 33;
+//        int subtrahend = 1;
+//        int expectedResult = 32;
         int actualResult = calculator.integerSubtraction(minuend, subtrahend);
         assertEquals(expectedResult, actualResult,
                 () -> minuend + " and " + subtrahend + " did not produce " +
