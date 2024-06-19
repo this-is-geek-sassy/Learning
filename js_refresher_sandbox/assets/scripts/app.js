@@ -3,7 +3,7 @@
 // import apiKey from "./util";
 // import { name, age } from "./util";
 
-import * as utils from "./util";
+import * as utils from "./util.js";
 
 console.log(utils.apiKey); // default import
 console.info(utils.name, utils.age);
@@ -45,6 +45,6 @@ console.log(allHobies);
 
 const extendedUser = {
   isAdmin: true,
-  ...user 
+  ...user
 };
 console.log(extendedUser);
