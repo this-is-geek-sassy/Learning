@@ -1,5 +1,6 @@
 import reactImg from './assets/react-core-concepts.png';
 import componentImg from './assets/components.png';
+import { CORE_CONCEPTS } from './data';
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
@@ -43,13 +44,25 @@ function App() {
           <h2>Core concepts</h2>
           <ul>
             <CoreConcepts 
-              title="Components" 
-              description="The core UI building block."
-              image={componentImg}
+              title={CORE_CONCEPTS[0].title} 
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
             />
-            <CoreConcepts/>
-            <CoreConcepts/>
-            <CoreConcepts/>
+            <CoreConcepts
+              title={CORE_CONCEPTS[1].title} 
+              description={CORE_CONCEPTS[1].description}
+              image={CORE_CONCEPTS[1].image}
+            />
+            <CoreConcepts
+              title={CORE_CONCEPTS[2].title} 
+              description={CORE_CONCEPTS[2].description}
+              image={CORE_CONCEPTS[2].image}
+            />
+            <CoreConcepts
+              title={CORE_CONCEPTS[3].title} 
+              description={CORE_CONCEPTS[3].description}
+              image={CORE_CONCEPTS[3].image}
+            />
           </ul>
         </section>
         
