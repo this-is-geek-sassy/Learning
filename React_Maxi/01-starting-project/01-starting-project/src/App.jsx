@@ -1,3 +1,4 @@
+import { useState } from 'react';   // built-in react-hook
 import componentImg from './assets/components.png';
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header';
@@ -6,10 +7,20 @@ import TabButton from './components/TabButton';
 
 function App() {
 
+  const [ selectedTopic, setSelectedTopic ] = useState('Please click a button');    // must be called inside of component functions (on top level)
+
+  let tabContent = 'Please click a button';
+
   function handleSelect(selectedButton) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
+    // tabContent = selectedButton;
+    setSelectedTopic(selectedButton);
     console.log(selectedButton);
+    console.log(selectedTopic);
+    // App();
   }
+
+  console.log('app component rendering');
 
   return (
     <div>
@@ -33,7 +44,7 @@ function App() {
             <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
-
+          {selectedTopic}
         </section>
       </main>
     </div>
