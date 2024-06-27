@@ -8,7 +8,7 @@ import { EXAMPLES } from './data';
 
 function App() {
 
-  const [ selectedTopic, setSelectedTopic ] = useState('components');    // must be called inside of component functions (on top level)
+  const [ selectedTopic, setSelectedTopic ] = useState();    // must be called inside of component functions (on top level)
 
   let tabContent = 'Please click a button';
 
@@ -46,13 +46,17 @@ function App() {
             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
           {/* {selectedTopic} */}
-          <div id="tab-content">
+          
+          {selectedTopic === undefined ? <p>Please select a topic</p> : (
+            <div id="tab-content">
             <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
             <pre>
               <code>{EXAMPLES[selectedTopic].code}</code>
             </pre>
           </div>
+          ) }
+          
         </section>
       </main>
     </div>
