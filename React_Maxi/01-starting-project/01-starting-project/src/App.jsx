@@ -1,4 +1,4 @@
-import { useState } from 'react';   // built-in react-hook
+import { useState, Fragment } from 'react';   // built-in react-hook
 import componentImg from './assets/components.png';
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header';
@@ -24,7 +24,7 @@ function App() {
   console.log('app component rendering');
 
   return (
-    <div>
+    <Fragment>
       <Header/>
       {/* <Header></Header> */}
       <main>
@@ -86,7 +86,7 @@ function App() {
           
         </section>
       </main>
-    </div>
+    </Fragment>
   );
 }
 
