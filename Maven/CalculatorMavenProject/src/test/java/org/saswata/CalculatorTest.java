@@ -3,6 +3,7 @@ package org.saswata;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
@@ -84,7 +85,13 @@ class CalculatorTest {
     @DisplayName("test integer subtraction")
     @ParameterizedTest
 //    @MethodSource("integerSubtractionInputParameters")
-    @MethodSource
+//    @MethodSource
+    @CsvSource( {
+            "33, 1, 32",
+            "24, 1, 23",
+            "54, 1, 53",
+//            "0, 1, -1"
+    } )
     public void testIntegerSubtraction(int minuend, int subtrahend, int expectedResult) {
         System.out.println("Performing " + minuend + "-" + subtrahend + "=" + expectedResult);
 //        Calculator calculator = new Calculator();
