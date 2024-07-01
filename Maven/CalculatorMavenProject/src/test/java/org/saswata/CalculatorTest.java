@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.stream.Stream;
 
@@ -102,5 +103,12 @@ class CalculatorTest {
         assertEquals(expectedResult, actualResult,
                 () -> minuend + " and " + subtrahend + " did not produce " +
                     expectedResult + ". It produced: " + actualResult);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"John", "Kate", "Alice"})
+    void valueSourceDemonstration(String firstName) {
+        System.out.println(firstName);
+        assertNotNull(firstName);
     }
 }
