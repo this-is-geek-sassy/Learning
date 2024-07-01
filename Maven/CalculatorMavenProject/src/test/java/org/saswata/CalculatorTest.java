@@ -28,7 +28,8 @@ class CalculatorTest {
         return Stream.of(
                 Arguments.of(33, 1, 32),
                 Arguments.of(54, 1, 53),
-                Arguments.of(23, 1, 22)
+                Arguments.of(23, 1, 22),
+                Arguments.of(0, 1, -1)
         );
     }
 
