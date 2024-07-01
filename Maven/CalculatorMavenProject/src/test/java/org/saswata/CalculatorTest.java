@@ -24,7 +24,7 @@ class CalculatorTest {
     }
 
     @org.jetbrains.annotations.NotNull
-    private static Stream<Arguments> integerSubtraction() {
+    private static Stream<Arguments> testIntegerSubtraction() {
         return Stream.of(
                 Arguments.of(33, 1, 32),
                 Arguments.of(54, 1, 53),
@@ -84,7 +84,7 @@ class CalculatorTest {
     @ParameterizedTest
 //    @MethodSource("integerSubtractionInputParameters")
     @MethodSource
-    public void integerSubtraction(int minuend, int subtrahend, int expectedResult) {
+    public void testIntegerSubtraction(int minuend, int subtrahend, int expectedResult) {
         System.out.println("Performing " + minuend + "-" + subtrahend + "=" + expectedResult);
 //        Calculator calculator = new Calculator();
 //        int minuend = 33;
