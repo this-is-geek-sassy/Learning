@@ -2,7 +2,7 @@ import { useState } from 'react';   // built-in react-hook
 import componentImg from './assets/components.png';
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header';
-import CoreConcepts from './components/CoreConcepts';
+import CoreConcept from './components/CoreConcept';
 import TabButton from './components/TabButton';
 import { EXAMPLES } from './data';
 
@@ -32,7 +32,7 @@ function App() {
           <h2>Core concepts</h2>
           {/* {[<p>hello</p>, <p>world</p>]} */}
           <ul>
-            {CORE_CONCEPTS.map((conceptItem) => <CoreConcepts key={conceptItem.title} {...conceptItem} />)}
+            {CORE_CONCEPTS.map((conceptItem) => <CoreConcept key={conceptItem.title} {...conceptItem} />)}
 
             {/* <CoreConcepts
               title={CORE_CONCEPTS[0].title}
