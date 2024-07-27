@@ -12,6 +12,6 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         int result = calculator.integerDivision(4, 2);
-        assertEquals(2, result);
+        assertEquals(2, result, "expected 2, got " + result);
     }
 }
