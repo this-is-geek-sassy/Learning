@@ -8,8 +8,11 @@ class CalculatorTest {
 
     Calculator calculator = new Calculator();
 
+    // test method naming convention:
+    // test<system under test>_<condition or state change>_<expected result>
+
     @Test
-    void integerDivisionTest() {
+    void testIntegerDivision_4Divides2_Gives2() {
 //        fail("no implementation provided");    // unconditional fail assertion
 
         int result = calculator.integerDivision(4, 2);
@@ -17,7 +20,12 @@ class CalculatorTest {
     }
 
     @Test
-    void integerSubtractionTest() {
+    void testIntegerDivision_DivideByZero_ShouldGiveArithmeticException(){
+        
+    }
+
+    @Test
+    void TestIntegerSubtraction_zeroAndMinusTwo_GivesTwo() {
 
         int minuend = 0, subtrahend = -2, expectedResult = minuend - subtrahend;
         int actualResult = calculator.integerSubtraction(minuend,subtrahend);
