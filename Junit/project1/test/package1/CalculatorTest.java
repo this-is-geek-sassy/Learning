@@ -6,12 +6,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
+    Calculator calculator = new Calculator();
+
     @Test
-    void integerDivision() {
+    void integerDivisionTest() {
 //        fail("no implementation provided");    // unconditional fail assertion
-        Calculator calculator = new Calculator();
 
         int result = calculator.integerDivision(4, 2);
         assertEquals(2, result, "expected 2, got " + result);
+    }
+
+    @Test
+    void integerSubtractionTest() {
+        int result = calculator.integerSubtraction(0,-2);
+        assertEquals(2, result);
     }
 }
