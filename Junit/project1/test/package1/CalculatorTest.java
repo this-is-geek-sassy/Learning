@@ -1,14 +1,28 @@
 package package1;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("test math operations in calculator class")
 class CalculatorTest {
 
-    Calculator calculator = new Calculator();
+    @BeforeAll
+    static void setup() {
+//        Calculator calculator;
+        System.out.println("executing @beforeall annotation");
+    }
+
+    @AfterAll
+    static void cleanup() {
+        System.out.println("executing @afterall annotation");
+    }
+    @BeforeEach
+    void beforeEachMethod() {
+        calculator = new Calculator();
+    }
+
+    Calculator calculator;   // declaring but not defining the variable
 
     // test method naming convention:
     // test<system under test>_<condition or state change>_<expected result>
@@ -24,16 +38,32 @@ class CalculatorTest {
 
     @Test
     @DisplayName("division by 0")
+//    @Disabled("todo: still need to work on it")
     void testIntegerDivision_DivideByZero_ShouldGiveArithmeticException(){
+        // arrange
+        int dividend = 4;
+        int divisor = 0;
+        String expectedExceptionMessage = "/ by zero";
 
+        // act & assert
+        ArithmeticException actualException = assertThrows(ArithmeticException.class, () -> {
+            // act
+            calculator.integerDivision(dividend, divisor);
+        }, "division by 0 should have thrown arithmetic exception");
+
+        // assert
+        assertEquals(expectedExceptionMessage, actualException.getMessage(), "Unexpected exception message");
     }
 
     @Test
     @DisplayName("test 33 - 1 = 32")
     void TestIntegerSubtraction_zeroAndMinusTwo_GivesTwo() {
 
+        // arrange
         int minuend = 0, subtrahend = -2, expectedResult = minuend - subtrahend;
+        // act
         int actualResult = calculator.integerSubtraction(minuend,subtrahend);
+        // assert
         assertEquals(expectedResult, actualResult,
                 () -> minuend + " - " + subtrahend + " did not produce " + expectedResult);
     }
