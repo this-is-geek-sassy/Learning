@@ -1,6 +1,12 @@
 package package1;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,16 +61,31 @@ class CalculatorTest {
         assertEquals(expectedExceptionMessage, actualException.getMessage(), "Unexpected exception message");
     }
 
-    @Test
+    @ParameterizedTest
+//    @MethodSource("integerSubtractionMethodParameters")
+    @CsvSource({
+            "33, 1, 32",
+            "14, 1, 13",
+            "0, 1, +1"
+    })
     @DisplayName("test 33 - 1 = 32")
-    void TestIntegerSubtraction_zeroAndMinusTwo_GivesTwo() {
+    void TestIntegerSubtraction_zeroAndMinusTwo_GivesTwo(int minuend, int subtrahend, int expectedResult) {
 
         // arrange
-        int minuend = 0, subtrahend = -2, expectedResult = minuend - subtrahend;
+//        int minuend = 0, subtrahend = -2, expectedResult = minuend - subtrahend;
         // act
         int actualResult = calculator.integerSubtraction(minuend,subtrahend);
         // assert
         assertEquals(expectedResult, actualResult,
                 () -> minuend + " - " + subtrahend + " did not produce " + expectedResult);
+    }
+
+    private static Stream<Arguments> integerSubtractionMethodParameters() {
+
+        return Stream.of(
+                Arguments.of(33, 1, 32),
+                Arguments.of(14, 1, 13),
+                Arguments.of(0, 1, -1)
+        );
     }
 }
