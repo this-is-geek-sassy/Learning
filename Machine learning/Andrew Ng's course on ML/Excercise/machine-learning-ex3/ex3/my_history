@@ -1,0 +1,695 @@
+x =5
+x = 1;
+x = 1:10;
+x
+plot(x
+)
+plot(x)
+# Octave 5.2.0, Wed Feb 26 01:40:05 2020 GMT <unknown@DESKTOP-30T4RI5>
+# Octave 5.2.0, Thu Feb 27 01:04:21 2020 GMT <unknown@DESKTOP-30T4RI5>
+x = [1,2104,5,1,45;1,1416,3,2,40;1,1534,3,2,30;1,852,2,1,36]
+y = [460,232,315,178]
+y = y'
+theta = pinv(x'*x)*x'*y
+# Octave 5.2.0, Thu Feb 27 03:16:44 2020 GMT <unknown@DESKTOP-30T4RI5>
+ls
+pwd
+cd Downloads/
+pwd
+cd ..
+pwd
+cd Documents/
+ls
+cd Codes/
+ls
+mkdir "Octave Codes"
+ls
+cd 'Octave Codes/
+cd Octave Codes/
+cd 'Octave Codes'
+ls
+ls
+data = load("-ascii","Task sheet.xlsx");
+data = load("-ascii","Task sheet.xlsx");
+data = load("-ascii","Task sheet.xlsx");
+data = load("-ascii","Task sheet.xlsx");
+who
+whos
+x = 1:10
+x'
+x
+x = x';
+save ("-binary","data","x")
+save data.mat x;
+clear
+whos
+load data.mat 
+whos
+v
+x
+save data.txt x
+save data.txt x -ascii
+save data1.txt x
+clear
+whos
+load data.txt 
+whos
+load data1.txt 
+whos
+data==x
+q
+qut
+quit
+# Octave 5.2.0, Tue Mar 10 02:13:09 2020 GMT <unknown@DESKTOP-30T4RI5>
+pw
+pwd
+ls
+cd Documents/
+ls
+cd Codes/
+ls
+cd 'Octave Codes'
+ls
+whos
+ans
+ans(3)
+ans(4)
+ans(2)
+ans(3)
+ans
+pwd
+pwd = ans
+pwd
+ans
+pwd(4
+)
+pwd(13)
+quit
+# Octave 5.2.0, Tue Mar 10 10:05:23 2020 GMT <unknown@DESKTOP-30T4RI5>
+pwd
+ls
+cd Documents/
+ls
+cd Codes/
+ls
+cd "Octave codes"
+ls
+whos
+ans
+ans
+help eye
+A = [1 2;3 4;5 6]
+size(A)
+class(A)
+ls
+load data
+whos
+x
+size(data)
+size(x)
+clear x
+whos
+load data
+clear x
+load data
+load data
+whos
+x = 1:0.5:50
+x
+size(x)
+x = x'
+y = x(1:10)
+save hello.mat y
+save data.mat x
+clear
+who
+whos
+load hello.mat 
+whos
+y
+save hello.txt v
+save hello.txt y
+A = [1 2;3 4;5 6];
+A(3,2)
+A(2,:)
+A(:,:)
+A(:,2)
+A([1 3],:)
+A(:,2)
+A(:,2) = [10,11,12]
+A = [A, [100; 200; 300]]
+A = [A; [100; 200; 300]]
+A = [A; [100 200 300]]
+A = [A; [6 13 400]]
+A(4,:) = []
+size(A)
+A(:)
+A = [1 2;3 4;5 6];
+B = [11,12;13,14;15,16];
+a
+A
+B
+c = [A B]
+d = [A; B]
+E = eye(4,4)
+who
+save data.mat A S E c d y
+save data.mat A B E c d y
+clear
+who
+load data.mat
+who
+A
+B
+c = [1 1; 2 2]
+A*C
+A*c
+A.*c
+A.*B
+A.^2
+v = [1;2;3]
+1./v
+log(v)
+exp(v)
+abs(v)
+quit
+# Octave 5.2.0, Wed Mar 11 05:52:16 2020 GMT <unknown@DESKTOP-30T4RI5>
+cd Documents/
+cd Codes/
+cd 'Octave Codes'
+ls
+A = magic(5)
+imagesc(A)
+imagesc(A), colorbar, colormap grey
+imagesc(A), colorbar, colormap grey;
+imagesc(A), colorbar, colormap gray;
+max(max(A))
+A(2,5) = 0
+imagesc(A), colorbar, colormap gray;
+imagesc(magic(15)), colorbar, colormap gray;
+imagesc(magic(500)), colorbar, colormap gray;
+imagesc(magic(50)), colorbar, colormap gray;
+imagesc(magic(15)), colorbar, colormap gray;
+print -dpsc fig1.png
+save data.mat
+save data.txt
+history_save();
+quit
+# Octave 5.2.0, Thu Mar 12 02:47:13 2020 GMT <unknown@DESKTOP-30T4RI5>
+v = zeros(10,1)
+for i=1:10,
+for i=1:10
+for i=1:10
+   v(i) = 2^i;
+end;
+v
+help disp
+doc disp
+doc disp
+doc disp
+help disp
+help fdisp
+MySquareFunc(5)
+ls
+cd Documents/
+cd Codes/
+cd "Octave Codes"
+ls
+MySquareFunc(5)
+quit
+# Octave 5.2.0, Thu Mar 12 03:10:00 2020 GMT <unknown@DESKTOP-30T4RI5>
+pwd
+cd Doc
+cd Documents/
+cd Codes/
+cd 'Octave Codes'
+ls
+pwd
+who
+x = ans
+cd..
+cd ..
+cd ..
+pwd
+cd ..
+pwd
+save OctaveDestPath.mat x
+save OctaveDestPath.txt x
+quit
+# Octave 5.2.0, Thu Mar 12 22:03:06 2020 GMT <unknown@DESKTOP-30T4RI5>
+who
+pwd
+ls
+load OctaveDestPath.txt
+who
+cd x
+cd 'x'
+x
+cd \x
+x
+cd 'C:\Users\DELL\Documents\Codes\Octave Codes'
+pwd
+who
+clear x
+who
+ls
+ls -l
+ls
+MySquareFunc(6)
+SquareAndCubeThisNo(4)
+SquareAndCubeThisNo(4)
+x = SquareAndCubeThisNo(5)
+x
+[x y] = SquareAndCubeThisNo(5)
+[x y] = SquareAndCubeThisNo(5)
+who
+clear
+m = 5;
+n = 2;
+p = 3;
+A = rand(5,2)
+B = rand(2,3)
+N = zeros(5,3)
+a(1,2)
+A(1,2)
+for k=1:3,
+   for i=1:m,
+      sum=0;
+for k=1:p,
+   for i=1:m,
+      sum=0;
+      for j=1:n,
+         sum = sum + (A(i,j)*B(j,k));
+      end;
+      N(i,k) = sum;
+   end;
+end;
+N
+A*B
+N==A*B
+format long;
+N
+A*B
+N==A*B
+help magic
+N(:)
+A*B(:)
+X=A*B
+X(:)
+plot(X,N);
+format short;
+X(:)
+X = [1 1; 1 2; 1 3]
+x = [1 1; 1 2; 1 3]
+X=A*B
+x = [1 1; 1 2; 1 3]
+y = [1;2;3]
+theta = [0;1]
+quit
+# Octave 5.2.0, Fri Mar 13 02:53:55 2020 GMT <unknown@DESKTOP-30T4RI5>
+pwd
+quit
+# Octave 5.2.0, Fri Mar 13 13:41:58 2020 GMT <unknown@DESKTOP-30T4RI5>
+pwd
+ls
+who
+load OctaveDestPath.txt 
+who
+x
+cd 'C:\Users\DELL\Documents\Codes\Octave Codes'
+ls
+who
+X = eye(10,5)
+X = ones(10,5)
+temp = ones(10,1)
+for i=1:10,
+   temp(i) = temp(i)*i;
+end;
+temp
+_temp = (1:10)'
+_temp = temp.*X
+A = [1 2; 3 4; 5 6];
+B = [1 2 3; 4 5 6];
+A
+B
+_temp 
+_temp(:,1:2)
+_temp
+temp
+_temp*temp
+_temp'*temp
+_temp = _temp'
+_temp*temp
+_temptemp
+v = 1:7
+v = (1:7)'
+v = (10:10:70)'
+w'*v
+v = (1:7)'
+w = (10:10:70)'
+w'*v
+v*w'
+v = (1:7)'
+v^2
+z = ones(7,7)
+z = z*5
+z^2
+z.^2
+z*z
+z
+z+1
+z/4
+quit
+# Octave 5.2.0, Fri Mar 13 17:27:04 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex1
+ex1
+submit
+clear
+ex1
+ex1
+ex1
+submit
+ex1
+ex1
+ex1
+ex1
+submit
+clear
+quit
+# Octave 5.2.0, Wed Mar 18 01:05:22 2020 GMT <unknown@DESKTOP-30T4RI5>
+pwd
+ls
+fopen('ex1.m')
+ex1
+ex1
+# Octave 5.2.0, Wed Apr 08 23:28:56 2020 GMT <unknown@DESKTOP-30T4RI5>
+load('ex1data1.txt')
+data = load('ex1data1.txt')
+clear ('ex1data1');
+disp (data);
+X = data(:,1);
+y = data(:,2);
+m = length(y);
+plot(x,y,rx,"Markersize",10);
+plot(X,y,rx,"Markersize",10);
+plot(X,y,"rx","Markersize",10);
+ylabel('Profit in $10,000s');
+xlabel('Population of City in 10,000s');
+help plot
+ex1.m
+ex1
+# Octave 5.2.0, Thu Apr 09 15:04:20 2020 GMT <unknown@DESKTOP-30T4RI5>
+this_string = "Here I am trying to create a string"
+ex1
+h = rand(97,1);
+k1 = h.^X;
+k1 = h.*X;
+k2 = X.*h;
+ex1\
+ex1
+submit
+# Octave 5.2.0, Sat Apr 11 22:30:01 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex1
+data = load('ex1data1.txt')
+data = load('ex1data2.txt')
+# Octave 5.2.0, Sun Apr 12 11:05:50 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex1_multi
+size(X, 2)
+mu = zeros(1, size(X, 2))
+length(X)
+mu
+mu(1)
+# Octave 5.2.0, Sun Apr 12 15:42:27 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex1_multi
+mu
+mu = zeros(1, size(X, 2));
+sigma = zeros(1, size(X, 2));
+mu
+sigma 
+mean_x = sum(X(:,1))
+mean_x = mean_x / length(X)
+mu(1) = mean_x 
+mean_x = sum(X(:,2))
+mean_x = mean_x / length(X)
+mu(2) = mean_x 
+an_x = X.^2
+mean_x = sum(an_x(:,1))
+mean_x = mean_x/length(an_x)
+var = zeros(1,2)
+var(1) = mean_x 
+var(1) = var(1) - (mu(1).^2)
+mu
+mean_x = sum(an_x(:,2))
+mean_x = mean_x/length(an_x)
+var(2) = mean_x 
+var(2) = var(2) - (mu(2).^2)
+sqrt(var)
+sigma = sqrt(var)
+mu
+X = (X-mu)
+X = X./sigma 
+mu
+x_sigma(1) = std(X(:,1));
+x_sigma(2) = std(X(:,2));
+x_sigma 
+sigma 
+X = ((X-mu)./x_sigma)
+ex1_multi
+submit
+ex1_multi
+submit
+ex1_multi
+submit
+X
+clear;
+close
+clc
+mu(1) = mean(X(:,1));
+%mean_x = sum(X(:,2));
+%mean_x = mean_x/length(X);
+mu(2) = mean(X(:,2));
+sigma(1) = std(X(:,1));
+sigma(2) = std(X(:,2));
+X_norm = ((X-mu)./sigma);
+ex1_multi
+mu(1) = mean(X(:,1));
+%mean_x = sum(X(:,2));
+%mean_x = mean_x/length(X);
+mu(2) = mean(X(:,2));
+sigma(1) = std(X(:,1));
+sigma(2) = std(X(:,2));
+X_norm = ((X-mu)./sigma);
+x_norm
+submit
+ex1_multi
+x = load('ex1data2.txt')
+ex1_multi
+ex1_multi
+X
+ex1_multi
+ex1_multi
+submit
+submit
+# Octave 5.2.0, Mon Apr 13 01:28:32 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex1_multi
+theta = ones(3,1)
+h = X*theta
+temp = h-y;
+tmep = tmep.*X;
+temp = temp.*X;
+temp = sum(tmep);
+temp = sum(temp);
+temp
+size(temp)
+temp = tmep';
+temp = temp';
+alpha = 1.3;
+tmep = temp.*(alpha/m)
+theta = theta-temp
+alpha = 0.01;
+tmep = temp.*(alpha/m)
+theta = theta-temp
+theta = ones(3,1)
+theta = theta-temp
+temp
+home_features = [1650 3];
+home_features 
+home_features = (home_features-mu)./sigma
+ex1_multi
+ex1_multi
+size(X)
+size(y)
+size(theta)
+ex1_multi
+ex1_multi
+ex1_multi
+ex1_multi
+ex1_multi
+submit
+quit
+# Octave 5.2.0, Tue Apr 14 13:40:33 2020 GMT <unknown@DESKTOP-30T4RI5>
+help fminunc
+ q()
+ quit()
+# Octave 5.2.0, Wed Apr 15 22:10:36 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex2
+ex2
+theta = [0.05; 0.05];
+h = X*theta;
+h = sigmoid(h);
+ex2
+submit
+# Octave 5.2.0, Mon Apr 20 20:00:55 2020 GMT <unknown@DESKTOP-30T4RI5>
+ls
+ex2.m
+open ex2.m
+data = load('ex2data1.txt');
+openvar(data)
+who data
+X = data(:, [1, 2]); y = data(:, 3);
+fprintf(['Plotting data with + indicating (y = 1) examples and o ' ...
+         'indicating (y = 0) examples.\n']);
+plotData(X, y);
+plotData(X, y);
+sigmoid(0)
+sigmoid(10)
+sigmoid(5)
+sigmoid(1)
+sigmoid(0.7\)
+sigmoid(0.7)
+sigmoid(-0.5)
+sigmoid(0.5)
+0.5 - sigmoid(-0.5)
+sigmoid(0.5) - 0.5
+exit
+# Octave 5.2.0, Mon May 11 12:01:18 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex2
+ex2
+h = X*theta;
+h = sigmoid(h);
+ex2
+ex2
+submit
+# Octave 5.2.0, Mon May 11 22:40:56 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex2
+ex2
+ex2
+ex2
+ex2
+ex2
+ex2
+# Octave 5.2.0, Tue May 12 01:20:44 2020 GMT <unknown@DESKTOP-30T4RI5>
+# Octave 5.2.0, Tue May 12 21:26:14 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex2_reg
+theta = initial_theta;
+m = length(y);
+J = 0;
+grad = zeros(size(theta));
+h = X*theta;
+h = sigmoid(h);
+part1 = log(h);
+part1 = -(y.*part1);
+part2 = log(1.-h);
+part2 = (1.-y).*part2;
+temp = part1-part2;
+temp = sum(temp);
+J = temp./m;
+% Let me compute the regularization term now.
+temp = sum(theta.^2);
+temp = (lambda/(2*m))*temp;
+% We will combine both of the parts now.
+J = J+temp;
+temp2 = h-y;
+temp2 = temp2.*X;
+temp2 = sum(temp2);
+grad = temp2./m;
+clear temp2;
+temp2 = theta(2:end).*(lambda/m);
+grad(2:end) = grad(2:end)+(temp2');
+J
+ex2_
+ex2_reg
+submit
+ex2_reg
+submit
+# Octave 5.2.0, Wed May 13 00:48:13 2020 GMT <unknown@DESKTOP-30T4RI5>
+# Octave 5.2.0, Wed May 27 22:18:21 2020 GMT <unknown@DESKTOP-30T4RI5>
+load('ex3data1.mat')
+size(X, 1)
+size(X, 2)
+# Octave 5.2.0, Thu Jul 02 16:21:39 2020 GMT <unknown@DESKTOP-30T4RI5>
+ex3
+ex3
+x = rand_indices(30)
+y(x
+)\
+y(x)
+x = rand_indices(83)
+y(x)
+ex3
+# Octave 5.2.0, Thu Jul 02 18:03:38 2020 GMT <unknown@DESKTOP-30T4RI5>
+m = 3
+ones(m, 1)
+data = load('ex2data1.txt');
+X = data(:, [1, 2]); y = data(:, 3);
+[m, n] = size(X);
+% Add intercept term to x and X_test
+X = [ones(m, 1) X];
+# Octave 5.2.0, Sun Jul 05 13:18:39 2020 GMT <unknown@DESKTOP-30T4RI5>
+data = load('ex2data1.txt');
+X = data(:, [1, 2]); y = data(:, 3);
+[m, n] = size(X)
+X = [ones(m, 1) X];
+x(1:10)
+X(1:10)
+X(1:10, :)
+# Octave 5.2.0, Sun Jul 05 23:35:32 2020 GMT <unknown@DESKTOP-30T4RI5>
+theta_t = [-2; -1; 1; 2]
+reshape(1:15,5,3)/10
+x
+X_t = [ones(5, 1) reshape(1:15,5,3)/10]
+[1;0;1;0;1] >= 0.5
+y_t = ([1;0;1;0;1] >= 0.5)
+g = X_t*theta_t
+h = sigmoid(g)
+sigmoid(5)
+log(h)
+-y_t.*log(h)
+1-y
+1.-y
+1-y_t
+y_t
+ex3
+h
+g = X_t*theta_t
+h = sigmoid(g)
+h-y
+h-y_t
+X_t
+(h - y_t).*X_t
+X_t.*(h - y_t)
+a = X_t.*(h - y_t)
+sum(a
+)
+sum(a
+)
+sum(a)
+sum(a)/m
+ex3
+ex3
+ex3
+ex3
+submit
+m = size(X, 1);
+n = size(X, 2);
+m, n
+shape(X)
+size(X)
+length(X)
+X(1, :)
+size(y)
+k = 5
+y(y==k)
+a5 = y(y==k);
+a5 = logical(y==k);
+history -w 'my_history';
