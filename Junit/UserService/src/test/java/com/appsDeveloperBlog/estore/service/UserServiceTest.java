@@ -1,15 +1,26 @@
 package com.appsDeveloperBlog.estore.service;
 
+import com.appsDeveloperBlog.estore.data.UsersRepository;
 import com.appsDeveloperBlog.estore.model.User;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
-    static UserService userService;
+
+    @InjectMocks
+    static UserServiceImpl userService;
+
+    @Mock
+    UsersRepository usersRepository;
     static String firstName;
     static String lastName;
     static String email;
@@ -18,7 +29,7 @@ public class UserServiceTest {
 
     @BeforeAll
     public static void init() {
-        userService = new UserServiceImpl();
+//        userService = new UserServiceImpl();
         firstName = "Saswata";
         lastName = "Mishra";
         email = "sample@email.com";
