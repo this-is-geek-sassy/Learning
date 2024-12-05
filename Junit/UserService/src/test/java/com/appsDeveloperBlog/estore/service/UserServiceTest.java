@@ -20,7 +20,9 @@ public class UserServiceTest {
     static UserServiceImpl userService;
 
     @Mock
-    UsersRepository usersRepository;
+    UsersRepository usersRepository;   // mockito will automatically create a mock obj that
+                                        // implements the UsersRepository interface
+
     static String firstName;
     static String lastName;
     static String email;
@@ -29,7 +31,7 @@ public class UserServiceTest {
 
     @BeforeAll
     public static void init() {
-//        userService = new UserServiceImpl();
+//        userService = new UserServiceImpl();   // no longer need to create manually
         firstName = "Saswata";
         lastName = "Mishra";
         email = "sample@email.com";
