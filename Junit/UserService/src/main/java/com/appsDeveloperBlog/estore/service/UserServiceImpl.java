@@ -8,8 +8,11 @@ public class UserServiceImpl implements UserService {
 
     UsersRepository usersRepository;
 
-    public UserServiceImpl(UsersRepository usersRepository) {
+    EmailVerificationService emailVerificationService;
+
+    public UserServiceImpl(UsersRepository usersRepository, EmailVerificationService emailVerificationService) {
         this.usersRepository = usersRepository;
+        this.emailVerificationService = emailVerificationService;
     }
 
     @Override
@@ -21,12 +24,26 @@ public class UserServiceImpl implements UserService {
 
         User user =  new User(firstName, lastName, email);
 //        UsersRepository usersRepository = new UsersRepositoryImpl();
-        boolean isUserCreated = usersRepository.save(user);
+
+        boolean isUserCreated;
+
+        try {
+            isUserCreated = usersRepository.save(user);
+
+        } catch(RuntimeException rex) {
+            throw new UserServiceException(rex.getMessage());
+        }
 
         if (!isUserCreated) {
             throw new UserServiceException("Could not creat user");
         }
 
+//        EmailVerificationService emailVerificationService = new EmailVerificationServiceImpl();
+        try {
+            emailVerificationService.scheduleEmailConfirmation(user);
+        } catch (RuntimeException e) {
+            throw new UserServiceException(e.getMessage());
+        }
         return user;
     }
 }

@@ -80,4 +80,18 @@ public class UserServiceTest {
         // Assert
         assertEquals(expectedExceptionMessage, exceptionThrown.getMessage(), "some other exception has been thrown, check manually");
     }
+
+    @DisplayName("If save() method causes RuntimeException, a userServiceException is thrown")
+    @Test
+    void testCreatUser_whenSavedMethodThrowsException_thenThrowsUserServiceException() {
+        // Arrange
+        when(usersRepository.save(any(User.class))).thenThrow(RuntimeException.class);
+
+        // Act & Assert
+        assertThrows(UserServiceException.class, () -> {
+            userService.createUser(firstName, lastName, email, password, repeatPassword);
+        }, "Should have thrown UserServiceException instead");
+
+        // Assert
+    }
 }
