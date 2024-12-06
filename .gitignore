@@ -5,3 +5,5 @@ node_modules*
 angular/typescript demo/*.js
 Projects/scientists-encyclopedia
 *.iml
+*.class
+*#

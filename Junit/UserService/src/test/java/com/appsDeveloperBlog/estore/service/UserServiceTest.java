@@ -30,8 +30,8 @@ public class UserServiceTest {
     static String password;
     static String repeatPassword;
 
-    @BeforeAll
-    public static void init() {
+    @BeforeEach
+    public void init() {
 //        userService = new UserServiceImpl();   // no longer need to create manually
         firstName = "Saswata";
         lastName = "Mishra";
