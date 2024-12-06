@@ -7,3 +7,4 @@ Projects/scientists-encyclopedia
 *.iml
 *.class
 *#
+Junit/UserService/target/test-classes/com/appsDeveloperBlog/estore/service/UserServiceTest.class

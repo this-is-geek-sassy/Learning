@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -45,7 +46,8 @@ public class UserServiceTest {
     void testCreateUser_whenUserDetailsProvided_ReturnsUserObject() {
 
         // Arrange
-        Mockito.when(usersRepository.save(Mockito.any(User.class))).thenReturn(true);
+//        Mockito.when(usersRepository.save(Mockito.any(User.class))).thenReturn(false);
+        Mockito.when(usersRepository.save(any(User.class))).thenReturn(true);
 
         // Act
         User user = userService.createUser(firstName, lastName, email, password, repeatPassword);
@@ -55,6 +57,12 @@ public class UserServiceTest {
         assertEquals(lastName, user.getLastName(), "lastName incorrect");
         assertEquals(email, user.getEmailId(), "email incorrect");
         assertNotNull(user.getId(), "user id is missing");
+        Mockito.verify(usersRepository, times(1))
+                .save(any(User.class));
+
+        // Mockito.verify(mockObject, Mockito.atLeast(n)).methodCall();
+//        Mockito.verify(mockObject, Mockito.atMost(n)).methodCall();
+//        Mockito.verify(mockObject, Mockito.never(n)).methodCall();
     }
 
     @DisplayName("Empty first name causes correct exception")
