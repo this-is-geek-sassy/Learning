@@ -7,5 +7,6 @@ public class EmailVerificationServiceImpl implements EmailVerificationService {
     public void scheduleEmailConfirmation(User user) {
 
         // Put user details into email queue
+        System.out.println("Email verification scheduled ---- method called");
     }
 }
