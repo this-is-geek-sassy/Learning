@@ -25,6 +25,9 @@ public class UserServiceTest {
     UsersRepository usersRepository;   // mockito will automatically create a mock obj that
                                         // implements the UsersRepository interface
 
+    @Mock
+    EmailVerificationServiceImpl emailVerificationService;
+
     static String firstName;
     static String lastName;
     static String email;
@@ -93,5 +96,25 @@ public class UserServiceTest {
         }, "Should have thrown UserServiceException instead");
 
         // Assert
+    }
+
+    @Test
+    @DisplayName("Email notification Exception is handled")
+    void testCreateUser_whenEmailNotificationExceptionThrown_thenThrowsUserServiceException() {
+
+        // Arrange
+        when(usersRepository.save(any(User.class))).thenReturn(true);
+//        when(emailVerificationService.scheduleEmailConfirmation(any(User.class))).thenThrow();    // won't compile since method is void
+
+        doThrow(EmailVerificationServiceException.class).when(emailVerificationService)
+                .scheduleEmailConfirmation(any(User.class));
+
+        // Act & Assert
+        assertThrows(UserServiceException.class, () -> {
+            userService.createUser(firstName, lastName, email, password, repeatPassword);
+        }, "Should have thrown EmailVerificationServiceException instead");
+
+        // Assert
+        verify(emailVerificationService, times(1)).scheduleEmailConfirmation(any(User.class));
     }
 }
