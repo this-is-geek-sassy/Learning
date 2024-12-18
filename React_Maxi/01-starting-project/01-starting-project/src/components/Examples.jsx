@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react";     // react hook   ---- also possible to designb custom react hooks
 import { EXAMPLES } from '../data';
 import TabButton from './TabButton';
 
@@ -11,7 +11,7 @@ export default function Examples() {
     function handleSelect(selectedButton) {
         // selectedButton => 'components', 'jsx', 'props', 'state'
         // tabContent = selectedButton;
-        setSelectedTopic(selectedButton);
+        setSelectedTopic(selectedButton);     // scheules update, kind of like a non-blocking system call
         console.log(selectedButton);
         console.log(selectedTopic);
         // App();
@@ -49,12 +49,12 @@ export default function Examples() {
             
             {selectedTopic === undefined ? <p>Please select a topic</p> : (
                 <div id="tab-content">
-                <h3>{EXAMPLES[selectedTopic].title}</h3>
-                <p>{EXAMPLES[selectedTopic].description}</p>
-                <pre>
-                <code>{EXAMPLES[selectedTopic].code}</code>
-                </pre>
-            </div>
+                    <h3>{EXAMPLES[selectedTopic].title}</h3>
+                    <p>{EXAMPLES[selectedTopic].description}</p>
+                    <pre>
+                        <code>{EXAMPLES[selectedTopic].code}</code>
+                    </pre>
+                </div>
             ) }
             
         </section>
