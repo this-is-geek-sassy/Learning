@@ -1,6 +1,7 @@
 import { useState } from "react";     // react hook   ---- also possible to designb custom react hooks
 import { EXAMPLES } from '../data';
 import TabButton from './TabButton';
+import Section from './Section.jsx';
 
 export default function Examples() {
 
@@ -17,8 +18,8 @@ export default function Examples() {
         // App();
     }
     return(
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section id="examples" title="Examples">
+            {/* <h2>Examples</h2> */}
             <menu>
                 <TabButton 
                     isSelected={selectedTopic === 'components'} 
@@ -57,6 +58,6 @@ export default function Examples() {
                 </div>
             ) }
             
-        </section>
+        </Section>
     );
 }
