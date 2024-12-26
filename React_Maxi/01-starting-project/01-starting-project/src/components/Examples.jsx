@@ -2,12 +2,24 @@ import { useState } from "react";     // react hook   ---- also possible to desi
 import { EXAMPLES } from '../data';
 import TabButton from './TabButton';
 import Section from './Section.jsx';
+import Tabs from "./Tabs.jsx";
 
 export default function Examples() {
 
     const [ selectedTopic, setSelectedTopic ] = useState();    // must be called inside of component functions (on top level)
 
-    let tabContent = 'Please click a button';
+    let tabContent = '';
+    if (selectedTopic) {
+        tabContent = (
+            <div id="tab-content">
+                <h3>{EXAMPLES[selectedTopic].title}</h3>
+                <p>{EXAMPLES[selectedTopic].description}</p>
+                <pre>
+                    <code>{EXAMPLES[selectedTopic].code}</code>
+                </pre>
+            </div>
+        );
+    }
 
     function handleSelect(selectedButton) {
         // selectedButton => 'components', 'jsx', 'props', 'state'
@@ -20,7 +32,7 @@ export default function Examples() {
     return(
         <Section id="examples" title="Examples">
             {/* <h2>Examples</h2> */}
-            <menu>
+            <Tabs buttons={<>
                 <TabButton 
                     isSelected={selectedTopic === 'components'} 
                     onSelect={() => handleSelect('components')}
@@ -45,10 +57,15 @@ export default function Examples() {
                 >
                 State
                 </TabButton>
-            </menu>
+            </>}>
+                {tabContent}
+            </Tabs>
+            {/* <menu>
+                
+            </menu> */}
           {/* {selectedTopic} */}
             
-            {selectedTopic === undefined ? <p>Please select a topic</p> : (
+            {/* {selectedTopic === undefined ? <p>Please select a topic</p> : (
                 <div id="tab-content">
                     <h3>{EXAMPLES[selectedTopic].title}</h3>
                     <p>{EXAMPLES[selectedTopic].description}</p>
@@ -56,7 +73,7 @@ export default function Examples() {
                         <code>{EXAMPLES[selectedTopic].code}</code>
                     </pre>
                 </div>
-            ) }
+            ) } */}
             
         </Section>
     );
