@@ -8,7 +8,7 @@ export default function Examples() {
 
     const [ selectedTopic, setSelectedTopic ] = useState();    // must be called inside of component functions (on top level)
 
-    let tabContent = '';
+    let tabContent = 'Please select a topic';
     if (selectedTopic) {
         tabContent = (
             <div id="tab-content">
@@ -32,7 +32,9 @@ export default function Examples() {
     return(
         <Section id="examples" title="Examples">
             {/* <h2>Examples</h2> */}
-            <Tabs buttons={<>
+            <Tabs 
+                ButtonsContainer="menu"
+                buttons={<>
                 <TabButton 
                     isSelected={selectedTopic === 'components'} 
                     onSelect={() => handleSelect('components')}
@@ -58,7 +60,7 @@ export default function Examples() {
                 State
                 </TabButton>
             </>}>
-                {tabContent}
+                <p>{tabContent}</p>
             </Tabs>
             {/* <menu>
                 
