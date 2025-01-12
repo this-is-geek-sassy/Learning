@@ -1,12 +1,55 @@
 * {
-    color: rgb(19, 173, 16);
+    /* color: rgb(19, 173, 16); */
     /* priority low, that's why not getting applied */
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background-color: rgb(255, 229, 198);
     /* text-align: end; */
 }
+
+nav {
+    background-color: #0f1111;
+    height: auto;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+}
+
+nav span {
+    margin-right: 200px;
+}
+
+nav span a {
+    color: white;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+a {
+    
+}
+
+div#searcharea {
+    /* padding-left: 300px; */
+    margin: auto;
+    justify-content: right;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+button#searchbtn {
+    width: 70px;
+    height: fit-content;
+    font-size: larger;
+    font-family: "Roboto Flex", serif;
+}
+
 h1 {
     color: red;
     text-align: center;
@@ -23,10 +66,11 @@ p {
 }
 
 button {
-    background-color: gainsboro;
-    color: rgb(27, 112, 182);
-    display: flex;
+    background-color: #f08804;
+    color: white;
+    display: inline;
     /* justify-content: center; */
+    margin: auto 10px;
 }
 a {
     text-decoration: none;
@@ -63,4 +107,24 @@ a {
     font-size: 13.7px;
     line-height: 14px;
     text-transform: capitalize;
+}
+
+div#rounded {#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+    height: 100px;
+    /* width: fit-content; */
+    width: 100px;
+    background-color: green;
+    color: black;
+    align-content: center;
+    text-align: center;
+    display: flexbox;
+    /* justify-content: center; */
+    border: solid black 3px;
+    padding: 50px;
+    margin: auto;
+    border-radius: 50%;
 }
