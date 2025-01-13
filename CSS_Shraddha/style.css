@@ -74,6 +74,7 @@ button {
 }
 a {
     text-decoration: none;
+    color: rgba(15, 17, 17, 0.459);
 }
 
 
@@ -127,4 +128,32 @@ div#rounded {#logo {
     padding: 50px;
     margin: auto;
     border-radius: 50%;
+}
+
+div#display {
+    display: inline;
+    background-color: cornsilk;
+}
+
+div.three-body {
+    width: 100px;
+    height: 100px;
+    margin: 25px 25px;
+    padding: 25px;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+}
+div#box1{
+    background-color: aliceblue;
+}
+
+div#box2 {
+    background-color: rgb(221, 203, 177);
+    /* display: none; */
+    visibility: hidden;
+}
+
+div#box3 {
+    background-color: darkolivegreen;
 }
