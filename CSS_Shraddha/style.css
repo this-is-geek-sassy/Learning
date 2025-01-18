@@ -8,6 +8,13 @@
 body {
     background-color: rgb(255, 229, 198);
     /* text-align: end; */
+    /* width: 100%; */
+    /* overflow: hidden; Hide scrollbars */
+    /* scrollbar-width: none; */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 nav {
@@ -20,12 +27,14 @@ nav {
 
 nav span {
     margin-right: 200px;
+    width: 100%;
 }
 
 nav span a {
     color: white;
     margin-top: 5px;
     padding-top: 5px;
+    /* width: 100%; */
 }
 
 a {
@@ -156,4 +165,44 @@ div#box2 {
 
 div#box3 {
     background-color: darkolivegreen;
+}
+
+footer {
+    background-color: rgb(1, 1, 74);
+    height: 3em;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+div.signal {
+    height: 100px;
+    width: 100px;
+    margin: 10px 20px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#signal-container {
+    background-color: black;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#signal-1 {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+#signal-2 {
+    background-color: rgba(255, 255, 0, 0.7);
+}
+
+#signal-3 {
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+main {
+    height: 1000px;
 }
