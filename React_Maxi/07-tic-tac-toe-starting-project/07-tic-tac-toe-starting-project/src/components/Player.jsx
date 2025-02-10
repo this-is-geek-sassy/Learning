@@ -22,7 +22,7 @@ export default function Player({initialName, symbol}) {
 
     function handleEditClick() {
         // react's recomended best practice
-        setIsEditing((editing) => !editing);    // react schedules these state update functions
+        setIsEditing((editing) => !editing);    // *** best practice: react schedules these state update functions
         // editing holds the old state value
     }
 
