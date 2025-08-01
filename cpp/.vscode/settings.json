@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "Jenkinsfile": "groovy",
+        "*html": "html",
+        "iostream": "cpp"
+    }
+}
