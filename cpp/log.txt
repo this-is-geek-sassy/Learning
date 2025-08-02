@@ -1,0 +1,17 @@
+
+================================
+Compiling: error.cpp
+Output: error.exe
+================================
+
+[SUCCESS] Compilation completed successfully
+
+================================
+Running: error.exe
+================================
+
+hello
+
+================================
+Program finished with exit code: 3
+================================
