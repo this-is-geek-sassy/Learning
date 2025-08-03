@@ -55,6 +55,8 @@ def compute_cost_test(target):
     
     print("\033[92mAll tests passed!")
     
+
+
 def compute_gradient_test(target):
     print("Using X with shape (4, 1)")
     # Case 1
@@ -62,7 +64,8 @@ def compute_gradient_test(target):
     y = np.array([4.5, 8.5, 12.5, 16.5]).T
     initial_w = 2.
     initial_b = 0.5
-    dj_dw, dj_db = target(x, y, initial_w, initial_b)
+    linear_model = model(initial_w, initial_b)
+    dj_dw, dj_db = target(x, y, linear_model)
     #assert dj_dw.shape == initial_w.shape, f"Wrong shape for dj_dw. {dj_dw} != {initial_w.shape}"
     assert dj_db == 0.0, f"Case 1: dj_db is wrong: {dj_db} != 0.0"
     assert np.allclose(dj_dw, 0), f"Case 1: dj_dw is wrong: {dj_dw} != [[0.0]]"
@@ -72,7 +75,8 @@ def compute_gradient_test(target):
     y = np.array([4, 7, 10, 13]).T + 2
     initial_w = 1.5
     initial_b = 1
-    dj_dw, dj_db = target(x, y, initial_w, initial_b)
+    linear_model = model(initial_w, initial_b)
+    dj_dw, dj_db = target(x, y, linear_model)
     #assert dj_dw.shape == initial_w.shape, f"Wrong shape for dj_dw. {dj_dw} != {initial_w.shape}"
     assert dj_db == -2, f"Case 1: dj_db is wrong: {dj_db} != -2"
     assert np.allclose(dj_dw, -10.0), f"Case 1: dj_dw is wrong: {dj_dw} != -10.0"   
