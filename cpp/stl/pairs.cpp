@@ -15,4 +15,8 @@ int main() {
     pair<int, int> arr[] = {{1, 2}, {3, 4}, {5, 6}};
 
     cout << arr[0].first << endl;
+
+    pair<int, string> a;
+    a = make_pair(2, "abc");
+    cout << a.first << endl;
 }
