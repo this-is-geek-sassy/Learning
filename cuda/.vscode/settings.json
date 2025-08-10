@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.cu": "cuda"
+    },
+    "C_Cpp.default.compilerPath": "/usr/local/cuda/bin/nvcc",
+    "C_Cpp.default.includePath": [
+        "/usr/local/cuda/include",
+        "${workspaceFolder}"
+    ],
+    "C_Cpp.default.defines": [
+        "__CUDACC__"
+    ]
+}
