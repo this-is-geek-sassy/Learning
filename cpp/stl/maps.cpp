@@ -14,7 +14,7 @@ void print(unordered_map<int, string> &p) {
 int main() {
 
     // Normal maps (RBTs): insert, update, find, erase: O(logn)
-    // Urordered maps
+    // Urordered maps (Hashtables): insert, update, find: O(1) avg. case complexity
     // Multi-maps
 
     unordered_map<int, string> m;
@@ -41,4 +41,10 @@ int main() {
 
     m.clear();
     print(m);
+
+
+    // unordered_map<pair<int, int>, int> m2;     <----- throws compilation error.
+    multimap<int, int> m3;
+    
+
 }
