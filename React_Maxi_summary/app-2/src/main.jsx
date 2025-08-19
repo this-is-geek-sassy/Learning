@@ -1,10 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
+import NewPost from './components/NewPost.jsx';
+
+const routeConfigObject = createBrowserRouter([
+  {path: '/', element: <App />},
+  {path: '/create-post', element: <NewPost />}
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={routeConfigObject}/>
   </StrictMode>,
 )
