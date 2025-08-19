@@ -1,15 +1,38 @@
 import NewPost from './NewPost';
 import Post from './Post'
 import classes from './Postslist.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from './Modal';
 
 function Postslist({ isPosting, onStopPosting }) {
 
+    // fetch('http://localhost:8080/posts').then(response => response.json()).then(data => {
+    //     setPosts(data.posts);   // infinite loop
+    // });
+
     const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        async function fetchPosts() {
+            const response = await fetch('http://localhost:8080/posts')
+            const resData = await response.json()
+            // .then(response => response.json()).then(data => {
+            //     setPosts(data.posts);   // infinite loop
+            // });
+            setPosts(resData.posts);
+        }
+        fetchPosts();
+    }, []);
 
     function addPostHandler(postData) {
         // setPosts([postData, ...posts]);   // ... is spread operator
+        fetch('http://localhost:8080/posts', {
+            method: 'POST',
+            body: JSON.stringify(postData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
         setPosts((existingPosts) => [postData, ...existingPosts]);     // updating state based on previous state
     }
 
