@@ -26,13 +26,21 @@ function Postslist({ isPosting, onStopPosting }) {
         <>
             {modalContent}
 
+            {posts.length > 0 && (
             <ul className={classes.posts}>
                 {/* <Post author={enteredAuthor} body={enteredBody} /> */}
                 {/* <Post author="Dark-knight" body="I'm Bruce Wayne!" /> */}
                 {posts.map((post, index) => (
                     <Post key={index} author={post.author} body={post.body} />
                 ))}
-            </ul>
+            </ul>)
+            }
+            {posts.length === 0 && (
+                <div>
+                    <h2>There are no posts yet!</h2>
+                    <p>Start adding some!</p>
+                </div>
+            )}
         </>
     )
 }
