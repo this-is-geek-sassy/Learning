@@ -11,15 +11,18 @@ function Postslist({ isPosting, onStopPosting }) {
     // });
 
     const [posts, setPosts] = useState([]);
+    const [isFetching, setIsFetching] = useState(false);
 
     useEffect(() => {
         async function fetchPosts() {
+            setIsFetching(true);
             const response = await fetch('http://localhost:8080/posts')
             const resData = await response.json()
             // .then(response => response.json()).then(data => {
             //     setPosts(data.posts);   // infinite loop
             // });
             setPosts(resData.posts);
+            setIsFetching(false);
         }
         fetchPosts();
     }, []);
@@ -49,7 +52,7 @@ function Postslist({ isPosting, onStopPosting }) {
         <>
             {modalContent}
 
-            {posts.length > 0 && (
+            {!isFetching && posts.length > 0 && (
             <ul className={classes.posts}>
                 {/* <Post author={enteredAuthor} body={enteredBody} /> */}
                 {/* <Post author="Dark-knight" body="I'm Bruce Wayne!" /> */}
@@ -58,10 +61,15 @@ function Postslist({ isPosting, onStopPosting }) {
                 ))}
             </ul>)
             }
-            {posts.length === 0 && (
+            {!isFetching && posts.length === 0 && (
                 <div>
                     <h2>There are no posts yet!</h2>
                     <p>Start adding some!</p>
+                </div>
+            )}
+            {isFetching && (
+                <div style={{textAlign: 'center', color: 'white', fontFamily: 'monospace'}}>
+                    <p>Loading posts...</p>
                 </div>
             )}
         </>
