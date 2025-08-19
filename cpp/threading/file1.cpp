@@ -63,7 +63,7 @@ int main() {
 
 
     start_time = chrono::steady_clock::now();
-    for (auto i=1; i<= pow(2, 40); i++) {
+    for (auto i=1; i<= pow(2, 31); i++) {
         continue;
     }
     end_time = chrono::steady_clock::now();
